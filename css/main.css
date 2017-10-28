@@ -101,70 +101,73 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*** Gloabal Styles **************/
 
-/*** Header Styles ***************/
+@import url('https://fonts.googlespis.com/css?family=Raleway');
+@import url('https://fonts.googlespis.com/css?family=Oswald');
 
-header.main-header {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    background-image: radial-gradient(#003D7C 0, #000 80%);
-    color: #fff;
-    text-align: center;
-}
-
-header.main-header h1 {
-    margin: 0 auto;
-    padding-top: 100px;
-}
-
-/*** Main Content Styles **********/
-
-main.main-content {
-    width: 96%;
-    height: auto;
-    margin: 0 auto;
-    padding: 0 2%;
-}
-
-main.main-content figure {
-    margin: 0 auto;
-    padding-top: 75px;
-}
-
-
-/*** About Section ***************/
-
-section#about figure {
-    text-align: center;
-}
-
-section#about figure img{
-    height: 300px;
-    width: 300px;
-    border-radius: 100%;
-}
-
-section#about figcaption {
-    margin: 1em auto;
-}
-
-section#skills {
-    text-align: center;
-}
-
-section#skills video{
-    border: 1px solid #ccc;
-}
-
-/*** Footer Styles *****************/
-footer {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+html, body {
+    margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url(../img/orchid-lg.jpg) no-repeat 50% 50%;
+    display: table;
+    top: 0;
+    background-size: cover;
+}
+
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
 }
+
+.content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+.content h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    color: #fff;
+}
+
+.content a {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: 'Oswald', serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content a:hover {
+    background-color: #fff;
+    border: 3px solid purple;
+    color: purple;
+}
+
+
+
+
+
 
 
 
