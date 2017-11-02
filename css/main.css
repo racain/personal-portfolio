@@ -111,11 +111,16 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-size: 16px;
 }
 
-body {
-    background-color: #222;
+.contain-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
+
+/*** Fullscreen image header ********************/
 
 .intro {
     height: 100%;
@@ -156,93 +161,80 @@ body {
     color: #fff;
 }
 
-.content a {
-    border: 3px solid #fff;
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: #fff;
-    font-family: 'Oswald', serif;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.content a:hover {
-    background-color: #fff;
-    border: 3px solid purple;
-    color: purple;
-}
-
 /*** Main Section Styles *************/
 
 main {
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 2%;
+    padding: 0;
 }
+
+/**** About area styles ***************/
 
 .about {
-    overflow: auto;
-    background-color: #003D7C;
-    border-radius: 5px;
-    box-shadow: 0 0 25px #fff;
-    color: #333;
-    margin-top: 2em;
-    padding: 5px 10px;
-}
-
-.about-message, .about ul, .contact {
-    border: 2px solid #999;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px #000;
-    background-color: #fff;
-    color: #333;
-    margin: 1em 1em;
-    padding: 5px 15px;
-}
-
-.about h2 {
-    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .about figure {
-    margin: 0 auto;
     text-align: center;
 }
 
-.about figure img {
+.about img {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #000;
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
+    box-shadow: 0 0 30px #fff;
+    margin-bottom: 1em;
 }
 
-.about figcaption {
-    margin: 1em auto;
+.about-message {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    background-color: #197ca5;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    line-height: 1.4em;
 }
 
-.skillset ul, .skillset h3 {
-    margin-top: 0;
+.about-message h2 {
+    font-family: 'Oswald', serif;
+    font-size: 2em;
 }
 
-.skillset ul {
+
+/*** Skills/Social area styles ************/
+
+.skills-list ul, .social-list ul {
     list-style-type: none;
-    padding-left: 0;
+    margin: 1.5 auto;
+    padding: 1.5em 0;
     text-align: center;
 }
 
-.contact a {
-    display: block;
+.social-list a {
+    text-decoration: none;
+    color: #000;
 }
 
-/*** Footer Styles ********************/
+
+
+
+/*** Footer styles ********************/
 
 footer {
-    clear: both;
-    width: 100%;
-    margin: 0 auto;
-    background-color: #222;
+    border-top: 3px solid #e38336;
+    background-color: #333;
     color: #fff;
+    font-size: 1.25em;
     text-align: center;
+    padding: .5em;
 }
+
 
 
 
