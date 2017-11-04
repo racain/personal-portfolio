@@ -181,7 +181,7 @@ main {
     text-align: center;
 }
 
-.about img {
+.about-message img {
     width: 250px;
     height: 250px;
     border: 2px solid #000;
@@ -209,16 +209,30 @@ main {
 
 /*** Skills/Social area styles ************/
 
+.skills-list, .social-list {
+    width: 85%;
+    margin: 2em auto;
+    padding: 0;
+    border: 3px solid #e38336;
+    border-radius: 15px 75px;
+    box-shadow: 0 0 25px #000;
+}
+
 .skills-list ul, .social-list ul {
     list-style-type: none;
     margin: 1.5 auto;
-    padding: 1.5em 0;
+    padding: 0;
     text-align: center;
 }
 
 .social-list a {
     text-decoration: none;
     color: #000;
+}
+
+img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
+    width: 75px;
+    height: 75px;
 }
 
 
