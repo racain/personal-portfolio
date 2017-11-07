@@ -103,8 +103,14 @@ textarea {
 
 /*** Gloabal Styles **************/
 
-@import url('https://fonts.googlespis.com/css?family=Raleway');
-@import url('https://fonts.googlespis.com/css?family=Oswald');
+@font-face {
+    font-family: 'cabin sketch';
+    src: url(../fonts/Cabin-Sketch/CabinSketch-Bold.ttf);
+}
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
 
 html, body {
     margin: 0;
@@ -114,11 +120,34 @@ html, body {
     font-size: 16px;
 }
 
+body {
+    background-color: #333;
+}
+
 .contain-1 {
     width: 100%;
     margin: 0 auto;
     padding: 0;
 }
+
+/*** Resume page layout/styles ******************/
+
+.resume {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 3px double #333;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*****************************************************/
+
 
 /*** Fullscreen image header ********************/
 
@@ -150,21 +179,33 @@ html, body {
 }
 
 .content h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 3em;
+    font-family: 'cabin sketch', sans-serif;
+    font-size: 4em;
     color: #fff;
+    letter-spacing: .035em;
 }
 
 .content h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'cabin sketch', sans-serif;
     font-size: 2em;
     color: #fff;
+}
+
+#down-arrow {
+    margin-top: 3em;
+    text-align: center;
+}
+
+#down-arrow img {
+    width: 50px;
+    height: 50px;
 }
 
 /*** Main Section Styles *************/
 
 main {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0;
 }
@@ -172,6 +213,7 @@ main {
 /**** About area styles ***************/
 
 .about {
+    border-top: 3px solid #999;
     width: 100%;
     height: auto;
     margin: 0 auto;
@@ -181,7 +223,11 @@ main {
     text-align: center;
 }
 
-.about-message img {
+.about figcaption {
+    font-size: 1.25em;
+}
+
+.about-info img {
     width: 250px;
     height: 250px;
     border: 2px solid #000;
@@ -190,7 +236,7 @@ main {
     margin-bottom: 1em;
 }
 
-.about-message {
+.about-info {
     width: 100%;
     height: auto;
     padding: 5%;
@@ -201,26 +247,41 @@ main {
     line-height: 1.4em;
 }
 
-.about-message h2 {
-    font-family: 'Oswald', serif;
-    font-size: 2em;
+.about-info h2 {
+    font-family: 'cabin sketch', sans-serif;
+    font-size: 2.25em;
+    text-align: center;
 }
 
-.about-message p {
+.about-info p {
+    font-family: 'raleway';
+    font-size: 1em;
     text-indent: 25px;
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 
 /*** Skills/Social area styles ************/
 
-.skills-list, .social-list {
-    width: 85%;
-    margin: 2em auto;
-    padding: 0;
-    border: 2px solid #e38336;
-    border-radius: 15px;
-    box-shadow: 0 0 25px #999   ;
+.skills-list {
+    border-top: 3px solid #999;
+    border-bottom: 2px solid #999;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #f8f8f8;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.skills-list h2 {
+    margin: 0;
+    padding: .5em 0;
+    font-family: 'cabin sketch';
+    font-size: 2.5em;
+    color: #e38336;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 .skills-list ul, .social-list ul {
@@ -229,13 +290,34 @@ main {
     padding: 0;
 }
 
-.skills-list li {
-    text-transform: uppercase;
-    padding: 2% 15%;
+.skills-list ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
-.skills-list li:nth-child(1) {
+.skills-list li {
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    flex-grow: 1;
+    color: #333;
     text-align: center;
+    text-shadow: 0 5px 15px #bebebe;
+    font-family: 'raleway', sans-serif;
+    font-size: 2em;
+}
+
+.social-list {
+    width: 85%;
+    margin: 2em auto;
+    padding: 0;
+    border: 2px solid #666;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 25px #f0f0f0;
 }
 
 .social-list ul{
@@ -265,6 +347,7 @@ img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
 }
 
 #resume-btn {
+    display: none; /* Hidden until resume document reflects current/recent employers */
     width: 100%;
     padding: 10px 25px;
     background-color: #e38336;
@@ -274,6 +357,7 @@ img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
 }
 
 #resume-btn a {
+    font-family: 'raleway', sans-serif;
     font-size: 1.25em;
     color: #fff;
     text-transform: uppercase;
@@ -288,19 +372,13 @@ footer {
     border-top: 5px solid #197ca5;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
-    background-color: #333;
+    background-color: #606060;
     color: #fff;
+    font-family: 'raleway', sans-serif;
     font-size: 1.25em;
     text-align: center;
     padding: .5em;
 }
-
-
-
-
-
-
-
 
 
 
@@ -394,15 +472,27 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media (min-width: 768px) {
+
+    #down-arrow {
+    margin-top: 8em;
+    text-align: center;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+    #down-arrow img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-info h2 {
+    font-family: 'cabin sketch', sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+}
+
+@media (min-width: 940px) {
+
 }
 
 /* ==========================================================================
