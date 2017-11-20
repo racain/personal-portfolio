@@ -493,6 +493,21 @@ footer {
 
 @media (min-width: 940px) {
 
+    /* Just playing around with some CSS transform and transition properties on the desktop layout
+    to let the vistor feel enganged with the website. */
+
+    .social-list ul li {
+        -webkit-transition: width 2s, height 2s,   -webkit-transform 2s;
+        transition: width 2s, height 2s, transform 2s;
+        -webkit-transition-timing-function: ease-out 2s;
+        transition-timing-function: ease-out 2s;
+    }
+
+    .social-list ul li:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);   
+    }
+
 }
 
 /* ==========================================================================
