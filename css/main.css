@@ -347,7 +347,6 @@ img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
 }
 
 #resume-btn {
-    display: none; /* Hidden until resume document reflects current/recent employers */
     width: 100%;
     padding: 10px 25px;
     background-color: #e38336;
@@ -496,14 +495,14 @@ footer {
     /* Just playing around with some CSS transform and transition properties on the desktop layout
     to let the vistor feel enganged with the website. */
 
-    .social-list ul li {
+    .social-list ul li.spin {
         -webkit-transition: width 2s, height 2s,   -webkit-transform 2s;
         transition: width 2s, height 2s, transform 2s;
         -webkit-transition-timing-function: ease-out 2s;
         transition-timing-function: ease-out 2s;
     }
 
-    .social-list ul li:hover {
+    .social-list ul li.spin:hover {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);   
     }
