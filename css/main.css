@@ -347,7 +347,7 @@ img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
 }
 
 #resume-btn {
-    width: 100%;
+    width: 80%;
     padding: 10px 25px;
     background-color: #e38336;
     border: 1px solid #999;
@@ -488,18 +488,29 @@ footer {
     font-size: 4em;
     text-align: center;
 }
+
+#resume-btn {
+    width: 55%;
+}
+
+
 }
 
 @media (min-width: 940px) {
+
+    #resume-btn {
+        width: 35%;
+    }
 
     /* Just playing around with some CSS transform and transition properties on the desktop layout
     to let the vistor feel enganged with the website. */
 
     .social-list ul li.spin {
-        -webkit-transition: width 2s, height 2s,   -webkit-transform 2s;
         transition: width 2s, height 2s, transform 2s;
-        -webkit-transition-timing-function: ease-out 2s;
+        -webkit-transition: width 2s, height 2s,   
+        -webkit-transform 2s;
         transition-timing-function: ease-out 2s;
+        -webkit-transition-timing-function: ease-out 2s;
     }
 
     .social-list ul li.spin:hover {
