@@ -11,13 +11,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-* {
-    box-sizing: border-box;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 /*
@@ -31,13 +27,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
@@ -45,12 +41,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -65,7 +61,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
@@ -73,9 +69,9 @@ video {
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -83,7 +79,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
@@ -91,295 +87,313 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-/*** Gloabal Styles **************/
+/* Colors ============================================*/
 
-@font-face {
-    font-family: 'cabin sketch';
-    src: url(../fonts/Cabin-Sketch/CabinSketch-Bold.ttf);
-}
-@font-face {
-    font-family: 'raleway';
-    src: url(../fonts/Raleway/Raleway-Regular.ttf);
+:root {
+  --orange: #ff8500;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
+/*  Fonts ============================================*/
+
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/roboto/roboto-thin.ttf");
+}
+
+@font-face {
+  font-family: optimusPrinceps;
+  src: url("../fonts/optimusPrinceps/optimusPrinceps.ttf");
+}
+
+/* Core Styles ============================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #333;
+  background: #2471a3;
+  color: #fff;
+  font-family: roboto;
+  font-size: 16px;
 }
 
-.contain-1 {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+.grid {
+  display: grid;
 }
 
-/*** Resume page layout/styles ******************/
-
-.resume {
-    width: 85%;
-    margin: 0 auto;
-    padding: 0;
-    background-color: #fff;
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.resume-header {
-    text-align: center;
-    border-bottom: 3px double #333;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+h1,
+h2,
+h3 {
+  font-family: optimusPrinceps;
+  color: var(--orange);
+  text-align: center;
 }
 
-/*****************************************************/
-
-
-/*** Fullscreen image header ********************/
-
-.intro {
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    background: url(../img/background.jpg) no-repeat 50% 50%;
-    display: table;
-    top: 0;
-    background-size: cover;
+h3 {
+  font-size: 1.75em;
+  letter-spacing: 0.09em;
+  text-shadow: 1px 1px 1px #fff;
+  margin: 1em;
 }
 
-.intro .inner {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    max-width: none;
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    text-indent: 2em;
 }
 
-.content {
-    background-color: rgba(0, 0, 0, .55);
-    border: 3px solid #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #000;
-    max-width: 30%;
-    margin: 0 auto;
-    text-align: center;
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
-.content h1 {
-    font-family: 'cabin sketch', sans-serif;
-    font-size: 4em;
-    color: #fff;
-    letter-spacing: .035em;
+.btn {
+  background: #fff;
+  color: #333;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  border-radius: 3px;
 }
 
-.content h2 {
-    font-family: 'cabin sketch', sans-serif;
-    font-size: 2em;
-    color: #fff;
+/* Header ============================================*/
+
+#showcase {
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  background: url("../img/web-dev.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
 }
 
-#down-arrow {
-    margin-top: 3em;
-    text-align: center;
+#showcase.grid {
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
-#down-arrow img {
-    width: 50px;
-    height: 50px;
+#showcase .container {
+  width: 100%;
+  margin-top: 120px;
+  /*padding: 1.3em 3em;*/
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px outset #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px 5px #000;
 }
 
-/*** Main Section Styles *************/
-
-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-/**** About area styles ***************/
-
-.about {
-    border-top: 3px solid #999;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.about figure {
-    text-align: center;
-}
-
-.about figcaption {
-    font-size: 1.25em;
-}
-
-.about-info img {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #000;
-    border-radius: 100%;
-    box-shadow: 0 0 30px #fff;
-    margin-bottom: 1em;
-}
-
-.about-info {
-    width: 100%;
-    height: auto;
-    padding: 5%;
-    background-color: #197ca5;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
-    font-weight: lighter;
-    line-height: 1.4em;
-}
-
-.about-info h2 {
-    font-family: 'cabin sketch', sans-serif;
-    font-size: 2.25em;
-    text-align: center;
-}
-
-.about-info p {
-    font-family: 'raleway';
-    font-size: 1em;
-    text-indent: 25px;
-    line-height: 1.5em;
-}
-
-
-/*** Skills/Social area styles ************/
-
-.skills-list {
-    border-top: 3px solid #999;
-    border-bottom: 2px solid #999;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    background-color: #f8f8f8;
-    color: #333;
-    text-transform: uppercase;
-}
-
-.skills-list h2 {
-    margin: 0;
-    padding: .5em 0;
-    font-family: 'cabin sketch';
-    font-size: 2.5em;
-    color: #e38336;
-    text-align: center;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-
-.skills-list ul, .social-list ul {
-    list-style-type: none;
-    margin: 1.5 auto;
-    padding: 0;
-}
-
-.skills-list ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.skills-list li {
-    width: 100%;
-    height: 75px;
-    margin: 0;
-    flex-grow: 1;
-    color: #333;
-    text-align: center;
-    text-shadow: 0 5px 15px #bebebe;
-    font-family: 'raleway', sans-serif;
-    font-size: 2em;
-}
-
-.social-list {
-    width: 85%;
-    margin: 2em auto;
-    padding: 0;
-    border: 2px solid #666;
-    border-radius: 15px;
-    background-color: #fff;
-    box-shadow: 0 0 25px #f0f0f0;
-}
-
-.social-list ul{
-    width: 80%;
-    margin: 1em auto;
-    display: flex;
-    flex-flow: row wrap;
-    flex-grow: 1;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.social-list ul li {
-    width: 50%;
-    margin: 1em 0;
-}
-
-.social-list a {
-    font-family: 'Raleway', serif;
-    text-decoration: none;
-    color: #000;
-}
-
-img#github-icon, img#linkedin-icon, img#facebook-icon, img#twitter-icon {
-    width: 75px;
-    height: 75px;
-}
-
-#resume-btn {
-    width: 80%;
-    padding: 10px 25px;
-    background-color: #e38336;
-    border: 1px solid #999;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px #666;
-}
-
-#resume-btn a {
-    font-family: 'raleway', sans-serif;
-    font-size: 1.25em;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-
-
-
-/*** Footer styles ********************/
-
-footer {
-    border-top: 5px solid #197ca5;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    background-color: #606060;
-    color: #fff;
-    font-family: 'raleway', sans-serif;
-    font-size: 1.25em;
-    text-align: center;
+#showcase h1 {
     padding: .5em;
+  color: #2471a3;
+  text-shadow: 1px 1px 1px #fff;
+  font-family: optimusPrinceps;
+  font-size: 2.35em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+#showcase p {
+    font-weight: 800;
+    text-indent: 0;
+}
+
+#showcase a {
+  margin-bottom: 1em;
+  display: inline-block;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+/* About ============================================*/
+
+#about .container {
+  padding: 1em;
+}
+
+#about p {
+    margin: 1em auto;
+}
+
+#about figure {
+  background: #fff;
+  margin: 0 auto 0.5em;
+  width: 100%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  text-align: center;
+}
+
+#about figcaption {
+    font-size: 1.25em;
+  background: #333;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+  border-top: 3px solid var(--orange);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#about img {
+  width: 200px;
+  height: 200px;
+  margin: 1.5em auto;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px #333;
 }
 
 
+
+/*  Services ==========================================*/
+
+#services {
+  padding: 1em 0 2.5em;
+  background: #fff;
+  color: #333;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+
+#services h3 {
+  margin: .5em;
+}
+
+#services ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#services ul li {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Skills ============================================*/
+
+#skills {
+  background: #2471a3;
+  padding-bottom: 2em;
+}
+
+#skills .container {
+  padding: 0.5em;
+}
+
+#skills h3 {
+    margin: .75em;
+}
+
+#skills ul {
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#skills ul li {
+  background: #333;
+  padding: 1em 0 0;
+  text-align: center;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 25px;
+  box-shadow: 5px 5px 15px #333;
+}
+
+#skills ul li p {
+  margin-top: 1em;
+  padding: 0.5em;
+  background: var(--orange);
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: 2px solid #fff;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 10px;
+  text-indent: 0;
+}
+
+
+
+/* Services ============================================*/
+
+#cta-hire {
+  width: 50%;
+  margin: 1em auto;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  border: 1px outset #999;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #333;
+  padding: 1em 3em;
+}
+
+#cta-hire button {
+  text-transform: uppercase;
+}
+
+/* Footer ============================================*/
+
+#main-footer {
+  margin-top: 1.5em;
+  padding: 1em;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-top: 3px solid var(--orange);
+}
+
+#main-footer .container {
+  text-align: center;
+}
+
+#main-footer p {
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+
+#main-footer ul {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+#main-footer img {
+  padding: auto;
+  width: 44px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -390,7 +404,7 @@ footer {
  */
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -403,17 +417,17 @@ footer {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
 }
 
 /*
@@ -424,15 +438,15 @@ footer {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -440,7 +454,7 @@ footer {
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -457,12 +471,12 @@ footer {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -472,52 +486,83 @@ footer {
    ========================================================================== */
 
 @media (min-width: 768px) {
+  /*Showcase section styles on Tablet */
 
-    #down-arrow {
-    margin-top: 8em;
-    text-align: center;
+  #showcase .container {
+    width: 70%;
+  }
+
+  /*About section styles on Tablet */
+
+  #about .container {
+    margin-bottom: 1em;
+    overflow: hidden;
+  }
+
+  #about h3 {
+    font-size: 2.25em;
+  }
+
+  #about figure {
+    width: 45%;
+    float: left;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  #about figcaption {
+    margin: 0 auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  #about p {
+    width: 50%;
+    float: right;
+    padding: 1em 0;
+    line-height: 1.6em;
+  }
+
+  /* Skills section styles on tablet */
+
+  #skills {
+    clear: both;
+  }
+
+  #skills h3 {
+    font-size: 2.25em;
+  }
+
+  #skills ul {
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #skills ul li {
+    padding: 1em;
+    border: 3px solid var(--orange);
+    border-radius: 50%;
+  }
+
+  #skills ul li p {
+    margin: 0;
+    background: none;
+  }
+
+  /* Services section styles for tablets */
+
+  #cta-hire {
+    width: 35%;
+  }
+
+  /* Footer section styles for tablets */
+
+  #main-footer .container {
+      width: 45%;
 }
 
-    #down-arrow img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .about-info h2 {
-    font-family: 'cabin sketch', sans-serif;
-    font-size: 4em;
-    text-align: center;
-}
-
-#resume-btn {
-    width: 55%;
-}
-
-
-}
-
-@media (min-width: 940px) {
-
-    #resume-btn {
-        width: 35%;
-    }
-
-    /* Just playing around with some CSS transform and transition properties on the desktop layout
-    to let the vistor feel enganged with the website. */
-
-    .social-list ul li.spin {
-        transition: width 2s, height 2s, transform 2s;
-        -webkit-transition: width 2s, height 2s,   
-        -webkit-transform 2s;
-        transition-timing-function: ease-out 2s;
-        -webkit-transition-timing-function: ease-out 2s;
-    }
-
-    .social-list ul li.spin:hover {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);   
-    }
-
+@media (min-width: 960px) {
+    /* Desktop screen sizes go here 8?
 }
 
 /* ==========================================================================
@@ -527,71 +572,71 @@ footer {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    /*
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
-        display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

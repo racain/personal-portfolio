@@ -155,7 +155,7 @@ body {
     height: 100%;
     width: 100%;
     margin: auto;
-    background: url(../img/background.jpg) no-repeat 50% 50%;
+    background: url("../img/background.jpg") no-repeat 50% 50%;
     display: table;
     top: 0;
     background-size: cover;
@@ -173,7 +173,7 @@ body {
     border: 3px solid #fff;
     border-radius: 5px;
     box-shadow: 0 0 15px #000;
-    max-width: 30%;
+    max-width: 85%;
     margin: 0 auto;
     text-align: center;
 }
