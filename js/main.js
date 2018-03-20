@@ -1,11 +1,8 @@
 
-/*****************************************************
-This smoothly scrolls to the about section.
-*******************************************************/
+// Creates reference to read more CTA button
+const readMoreBtn = document.querySelector('#read-more-btn')
 
-$('#down-arrow-btn').click(() => {
-    $('html, body').animate({
-        scrollTop: $('.about-info').offset().top
-    }, 800);
-});
-
+// Listens for click event on the read more button
+readMoreBtn.addEventListener('click', e => {
+    // Performs action upon click
+})

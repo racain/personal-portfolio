@@ -2,6 +2,15 @@
 <html class="no-js" lang="en">
 
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-104097712-1');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +36,10 @@
 
     <!-- Fullscreen Header -->
     <header class="grid" id="showcase">
-        <div class="container">
+        <div class="grid container">
             <h1>Ryan Cain</h1>
             <p>Web Developer</p>
-            <a class="btn">Read More</a>
+            <a class="btn" href="#about">Read More</a>
         </div>
     </header>
 
@@ -46,7 +55,11 @@
                 <p>Do you need a website so your customers can find out more about your products or services? Do you want a website that looks great on all screen sizes? There are many devices, from small mobile phones to large desktop computers, that display your website and it should look clean and professional on all of them. I can help you put your business on the web and make sure your customers can easily find the information they are looking for no matter the device they use.</p>
 
                 <div class="container" id="cta-hire">
-                    <button>Hire Me</button>
+                    <p>Send an email to
+                        <span>
+                            <a href="mailto:hello@ryancain.info"> hello@ryancain.info</a>
+                        </span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -56,34 +69,33 @@
                 <h3>Services Provided</h3>
                 <ul>
                     <li>Website Development</li>
-                    <li>Website Management</li>
+                    <li>Website Modification</li>
                     <li>Social Media Setup</li>
                     <li>Domain Name/Hosting Preparation</li>
                 </ul>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="contact">
+            <h3>Let's chat...</h3>
             <div class="container">
-                <h3>Proficiencies</h3>
-                <ul class="grid">
-                    <li>
-                        <i class="fab fa-html5 fa-5x"></i>
-                        <p>Html</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-css3-alt fa-5x"></i>
-                        <p>CSS</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-js-square fa-5x"></i>
-                        <p>Javascript</p>
-                    </li>
-                    <li>
-                        <i class="fab fa-wordpress-simple fa-5x"></i>
-                        <p>Wordpress</p>
-                    </li>
-                </ul>
+
+                <form method="post" action="send-email.php">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="" />
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="" />
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Send me a message..."></textarea>
+
+                    <input type="submit" name="submit" class="btn" id="submit-btn">
+                </form>
+
             </div>
         </section>
     </main>

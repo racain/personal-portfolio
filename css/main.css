@@ -107,7 +107,17 @@ textarea {
 
 @font-face {
   font-family: roboto;
-  src: url("../fonts/roboto/roboto-thin.ttf");
+  src: url("../fonts/roboto/roboto.ttf");
+}
+
+@font-face {
+  font-family: roboto-condensed;
+  src: url("../fonts/roboto/roboto-condensed.ttf");
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url("../fonts/roboto/roboto-bold.ttf");
 }
 
 @font-face {
@@ -131,7 +141,7 @@ html {
 body {
   background: #2471a3;
   color: #fff;
-  font-family: roboto;
+  font-family: roboto-condensed;
   font-size: 16px;
 }
 
@@ -161,9 +171,9 @@ h3 {
 }
 
 p {
-    font-size: 1.2em;
-    line-height: 1.6em;
-    text-indent: 2em;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  text-indent: 2em;
 }
 
 ul {
@@ -171,12 +181,15 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
   background: #fff;
   color: #333;
-  border: 1px solid #fff;
-  padding: 5px 15px;
-  border-radius: 3px;
+  padding: 15px 10px;
+  border-radius: 15px;
 }
 
 /* Header ============================================*/
@@ -200,8 +213,7 @@ ul {
 
 #showcase .container {
   width: 100%;
-  margin-top: 120px;
-  /*padding: 1.3em 3em;*/
+  margin-top: 120px auto 0;
   background-color: rgba(0, 0, 0, 0.8);
   border: 3px outset #fff;
   border-radius: 10px;
@@ -209,7 +221,7 @@ ul {
 }
 
 #showcase h1 {
-    padding: .5em;
+  padding-top: 0.5em;
   color: #2471a3;
   text-shadow: 1px 1px 1px #fff;
   font-family: optimusPrinceps;
@@ -219,14 +231,16 @@ ul {
 }
 
 #showcase p {
-    font-weight: 800;
-    text-indent: 0;
+  font-weight: 800;
+  text-indent: 0;
 }
 
 #showcase a {
+  width: 50%;
   margin-bottom: 1em;
   display: inline-block;
-  margin-top: 25px;
+  margin: 25px auto;
+  text-decoration: none;
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -238,7 +252,8 @@ ul {
 }
 
 #about p {
-    margin: 1em auto;
+  font-family: roboto-condensed;
+  margin: 1em auto;
 }
 
 #about figure {
@@ -253,7 +268,7 @@ ul {
 }
 
 #about figcaption {
-    font-size: 1.25em;
+  font-size: 1.25em;
   background: #333;
   width: 100%;
   color: #fff;
@@ -271,7 +286,41 @@ ul {
   box-shadow: 0 5px 10px #333;
 }
 
+#about div.container {
+  width: 100%;
+  clear: both;
+}
 
+#about button {
+  width: 100%;
+  padding: 1em 2em;
+  background: #fff;
+  color: #333;
+  border: 2px solid var(--orange);
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 25px 5px #000;
+}
+
+#about button a {
+  color: #000;
+  text-decoration: none;
+}
+
+#about #cta-hire p {
+  width: 100%;
+  text-align: left;
+}
+
+#about #cta-hire.container {
+  padding: 0;
+  font-size: 1em;
+  text-align: left;
+}
+
+#about #cta-hire.container a {
+  color: orange;
+}
 
 /*  Services ==========================================*/
 
@@ -280,11 +329,11 @@ ul {
   background: #fff;
   color: #333;
   border-top: 2px solid #999;
-  border-bottom: 2px solid #999;
+  /*border-bottom: 2px solid #999;*/
 }
 
 #services h3 {
-  margin: .5em;
+  margin: 0.5em;
 }
 
 #services ul {
@@ -295,78 +344,61 @@ ul {
 #services ul li {
   margin-bottom: 10px;
   text-align: center;
+  font-size: 1.25em;
   font-weight: bolder;
 }
 
-/* Skills ============================================*/
+/* Contact/Form ============================================*/
 
-#skills {
+#contact {
+  display: none;
   background: #2471a3;
-  padding-bottom: 2em;
+  padding: 1em;
 }
 
-#skills .container {
+#contact .container form {
   padding: 0.5em;
+  display: flex;
+  flex-direction: column;
 }
 
-#skills h3 {
-    margin: .75em;
+#contact form label {
+  font-family: roboto-condensed;
 }
 
-#skills ul {
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+#contact form input,
+#contact form textarea {
+  margin: 0.5em auto;
+  border: 2px inset #fff;
+  border-radius: 3px;
 }
-
-#skills ul li {
-  background: #333;
-  padding: 1em 0 0;
-  text-align: center;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 25px;
-  box-shadow: 5px 5px 15px #333;
-}
-
-#skills ul li p {
-  margin-top: 1em;
-  padding: 0.5em;
-  background: var(--orange);
+#contact form input {
   width: 100%;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-top: 2px solid #fff;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 10px;
-  text-indent: 0;
+  height: 2em;
 }
 
+#contact form textarea {
+  width: 100%;
+  height: 10em;
+}
 
-
-/* Services ============================================*/
-
-#cta-hire {
-  width: 50%;
-  margin: 1em auto;
-  text-align: center;
+#contact form input#submit-btn {
+  text-transform: uppercase;
+  margin-top: 1.25em;
+  width: 65%;
+  height: 3em;
+  border: none;
   background: #fff;
-  color: #333;
-  border: 1px outset #999;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px #333;
-  padding: 1em 3em;
-}
-
-#cta-hire button {
-  text-transform: uppercase;
+  color: #000;
+  border: 2px solid var(--orange);
+  box-shadow: 3px 3px 25px 5px #000;
 }
 
 /* Footer ============================================*/
 
 #main-footer {
-  margin-top: 1.5em;
-  padding: 1em;
+  /*margin-top: 1.5em;*/
+  padding: 1em 1em 2em;
   background: #333;
   color: #fff;
   text-align: center;
@@ -378,6 +410,7 @@ ul {
 }
 
 #main-footer p {
+  text-indent: 0;
   margin-top: 0.5em;
   font-size: 1.25em;
 }
@@ -485,17 +518,16 @@ ul {
    Modify as content requires.
    ========================================================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   /*Showcase section styles on Tablet */
 
   #showcase .container {
-    width: 70%;
+    width: 65%;
   }
 
   /*About section styles on Tablet */
 
   #about .container {
-    margin-bottom: 1em;
     overflow: hidden;
   }
 
@@ -519,34 +551,29 @@ ul {
   #about p {
     width: 50%;
     float: right;
-    padding: 1em 0;
+    margin: 0;
+    padding: 0;
     line-height: 1.6em;
   }
 
-  /* Skills section styles on tablet */
-
-  #skills {
-    clear: both;
+  #about div.container #cta-hire {
+    padding: 0;
+    text-align: center;
   }
 
-  #skills h3 {
-    font-size: 2.25em;
+  #about button {
+    margin: 2em auto;
+    width: 50%;
   }
 
-  #skills ul {
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+  #about #cta-hire p {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
   }
 
-  #skills ul li {
-    padding: 1em;
-    border: 3px solid var(--orange);
-    border-radius: 50%;
-  }
-
-  #skills ul li p {
-    margin: 0;
-    background: none;
+  #about #cta-hire p span {
+    font-style: italic;
   }
 
   /* Services section styles for tablets */
@@ -555,14 +582,76 @@ ul {
     width: 35%;
   }
 
+  /* Contact/Form styles for tablets */
+
+  #contact {
+    display: none;
+  }
+
+  #contact .container {
+    text-align: center;
+  }
+
+  #contact form {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  #contact form label {
+    text-align: left;
+  }
+
   /* Footer section styles for tablets */
 
   #main-footer .container {
-      width: 45%;
+    width: 45%;
+  }
 }
 
 @media (min-width: 960px) {
-    /* Desktop screen sizes go here 8?
+  /* Showcase area styles for desktop screens */
+
+  #showcase a {
+    width: 45%;
+  }
+
+  /* About section styles for desktop screen sizes */
+
+  .btn {
+    width: 50%;
+  }
+
+  #about {
+    padding: 0 0 3.5em;
+  }
+
+  #about button:hover {
+    font-weight: bolder;
+  }
+
+  #about .container#cta-hire {
+    width: 50%;
+    margin: -7em 0 0;
+    float: right;
+  }
+
+  /* Contact section styles for desktop screen sizes */
+
+  #contact {
+    display: none;
+  }
+
+  #contact form {
+    width: 70%;
+  }
+
+  #contact form input#submit-btn {
+    width: 45%;
+  }
+
+  #contact form input#submit-btn:hover {
+    font-weight: bolder;
+  }
 }
 
 /* ==========================================================================
