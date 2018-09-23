@@ -139,17 +139,16 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr;
   background: #2471a3;
   color: #fff;
   font-family: roboto-condensed;
   font-size: 16px;
 }
 
-.grid {
-  display: grid;
-}
-
 .container {
+  display: grid;
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
@@ -167,7 +166,7 @@ h3 {
   font-size: 1.75em;
   letter-spacing: 0.09em;
   text-shadow: 1px 1px 1px #fff;
-  margin: 1em;
+  margin-top: 1em;
 }
 
 p {
@@ -205,7 +204,8 @@ a {
   text-align: center;
 }
 
-#showcase.grid {
+#showcase {
+  display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
@@ -213,6 +213,7 @@ a {
 
 #showcase .container {
   width: 100%;
+  padding: 1em 0.5em;
   margin-top: 120px auto 0;
   background-color: rgba(0, 0, 0, 0.8);
   border: 3px outset #fff;
@@ -247,6 +248,10 @@ a {
 
 /* About ============================================*/
 
+#about {
+  border-top: 5px solid #fff;
+}
+
 #about .container {
   padding: 1em;
 }
@@ -257,31 +262,22 @@ a {
 }
 
 #about figure {
-  background: #fff;
-  margin: 0 auto 0.5em;
+  margin: 0 auto;
+  padding: 0;
   width: 100%;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
   text-align: center;
 }
 
 #about figcaption {
   font-size: 1.25em;
-  background: #333;
   width: 100%;
   color: #fff;
-  padding: 1em;
-  border-top: 3px solid var(--orange);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
 }
 
 #about img {
   width: 200px;
   height: 200px;
-  margin: 1.5em auto;
+  margin: 1em auto;
   border-radius: 50%;
   box-shadow: 0 5px 10px #333;
 }
@@ -327,7 +323,10 @@ a {
 /*  Services ==========================================*/
 
 #services {
-  padding: 1em 0 2.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
   background: #fff;
   color: #333;
   border-top: 2px solid #999;
@@ -335,19 +334,19 @@ a {
 }
 
 #services h3 {
-  margin: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 #services ul {
-  margin: 0 auto;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 #services ul li {
-  margin-bottom: 10px;
   text-align: center;
-  font-size: 1.25em;
-  font-weight: bolder;
+  margin: 0.5em 0;
 }
 
 /* Contact/Form ============================================*/
@@ -524,7 +523,7 @@ a {
   /*Showcase section styles on Tablet */
 
   #showcase .container {
-    width: 65%;
+    width: 55%;
   }
 
   /*About section styles on Tablet */
@@ -634,6 +633,12 @@ a {
   #about .container#cta-hire {
     margin: -7em 0 0;
     float: right;
+  }
+
+  #about .container#cta-hire a:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
   }
 
   /* Contact section styles for desktop screen sizes */
