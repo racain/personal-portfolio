@@ -147,12 +147,14 @@ body {
   font-size: 16px;
 }
 
+/*
 .container {
   display: grid;
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
 }
+*/
 
 h1,
 h2,
@@ -184,6 +186,10 @@ a {
   text-decoration: none;
 }
 
+#bot-field {
+  display: none;
+}
+
 .btn {
   background: #fff;
   color: #333;
@@ -194,9 +200,12 @@ a {
 /* Header ============================================*/
 
 #showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 100vw;
   height: 100vh;
-  padding: 2em;
   background: url("../img/web-dev.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -204,17 +213,10 @@ a {
   text-align: center;
 }
 
-#showcase {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-}
-
-#showcase .container {
-  width: 100%;
+#showcase div.container {
+  width: 95%;
   padding: 1em 0.5em;
-  margin-top: 120px auto 0;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.8);
   border: 3px outset #fff;
   border-radius: 10px;
@@ -222,10 +224,10 @@ a {
 }
 
 #showcase h1 {
-  padding-top: 0.5em;
+  padding: 0.5em 0;
   color: #2471a3;
   text-shadow: 1px 1px 1px #fff;
-  font-family: optimusPrinceps;
+  font-family: "Life Savers", cursive;
   font-size: 2.35em;
   letter-spacing: 0.05em;
   margin: 0;
@@ -352,7 +354,7 @@ a {
 /* Contact/Form ============================================*/
 
 #contact {
-  display: none;
+  display: block;
   background: #2471a3;
   padding: 1em;
 }
@@ -522,8 +524,8 @@ a {
 @media (min-width: 600px) {
   /*Showcase section styles on Tablet */
 
-  #showcase .container {
-    width: 55%;
+  #showcase div.container {
+    width: 65%;
   }
 
   /*About section styles on Tablet */
@@ -533,6 +535,7 @@ a {
   }
 
   #about h3 {
+    margin: 1em 0.75em 0.5em;
     font-size: 2.25em;
   }
 
@@ -586,7 +589,7 @@ a {
   /* Contact/Form styles for tablets */
 
   #contact {
-    display: none;
+    display: block;
   }
 
   #contact .container {
@@ -595,7 +598,7 @@ a {
 
   #contact form {
     margin: 0 auto;
-    width: 75%;
+    width: 65%;
   }
 
   #contact form label {
@@ -626,6 +629,11 @@ a {
     padding: 0 0 3.5em;
   }
 
+  #about div.container {
+    width: 75%;
+    margin: 0 auto;
+  }
+
   #about button:hover {
     font-weight: bolder;
   }
@@ -644,11 +652,11 @@ a {
   /* Contact section styles for desktop screen sizes */
 
   #contact {
-    display: none;
+    display: block;
   }
 
   #contact form {
-    width: 70%;
+    width: 45%;
   }
 
   #contact form input#submit-btn {

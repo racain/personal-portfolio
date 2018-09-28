@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="en" />
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
 <head>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -20,6 +20,7 @@
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Life+Savers" rel="stylesheet">
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -36,7 +37,7 @@
 
     <!-- Fullscreen Header -->
     <header id="showcase">
-        <div class="grid container">
+        <div class="container">
             <h1>Ryan Cain</h1>
             <p>Web Developer</p>
             <a class="btn" href="#about">Read More</a>
@@ -49,7 +50,7 @@
                 <h3>About Me</h3>
                 <figure>
                     <img src="img/self-portrait.jpg" alt="Ryan Cain, Web Developer" />
-                    <figcaption>Ryan Cain<br>Front End Web Developer</figcaption>
+                    <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
                 </figure>
                 <p>Do you need a website so your customers can find out more about your products or services? Do you want a website that looks great on all screen sizes? There are many devices, from small mobile phones to large desktop computers, that display your website and it should look clean and professional on all of them. I can help you put your business on the web and make sure your customers can easily find the information they are looking for no matter the device they use.</p>
 
@@ -65,33 +66,34 @@
 
         <section id="services">
             <h3 class="services-header">Services Provided</h3>
-            <ul class="services-items">
-                <ul class="services__list">
-                    <li>Website Development</li>
-                    <li>Website Modification</li>
-                    <li>Social Media Setup</li>
-                    <li>Domain Name/Hosting Preparation</li>
-                </ul>
+            <ul class="services__list">
+                <li>Website Development</li>
+                <li>Website Modification</li>
+                <li>Social Media Setup</li>
+                <li>Domain Name/Hosting Preparation</li>
+            </ul>
         </section>
 
         <section id="contact">
             <h3>Let's chat...</h3>
             <div class="container">
 
-                <form method="post" action="send-email.php">
+                <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="" />
+                    <input type="text" id="firstName" name="firstName" />
 
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="" />
+                    <input type="text" id="lastName" name="lastName" />
 
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email" />
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Send me a message..."></textarea>
+                    <input id="bot-field" name="bot-field" />
 
-                    <input type="submit" name="submit" class="btn" id="submit-btn">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <input type="submit" name="submit" class="btn" id="submit-btn" />
                 </form>
 
             </div>
@@ -104,22 +106,22 @@
             <ul>
                 <li>
                     <a href="https://twitter.com/ryancain_webdev" target="_blank">
-                        <img src="img/twitter-sm.png" alt="Twitter icon that links to Ryan Cain 's twitter page">
+                        <img src="img/twitter-sm.png" alt="Twitter icon that links to Ryan Cain 's twitter page" />
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/racain" target="_blank">
-                        <img src="img/github-sm.png" alt="Github icon that links to Ryan Cain's github page">
+                        <img src="img/github-sm.png" alt="Github icon that links to Ryan Cain's github page" />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/ryancainwebdev" target="_blank">
-                        <img src="img/linkedin-sm.png" alt="LinkIn icon that links to Ryan Cain 's linkedin page">
+                        <img src="img/linkedin-sm.png" alt="LinkIn icon that links to Ryan Cain 's linkedin page" />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/ryancainwebdev" target="_blank">
-                        <img src="img/facebook-sm.png" alt="Facebook icon that links to Ryan Cain's facebook page">
+                        <img src="img/facebook-sm.png" alt="Facebook icon that links to Ryan Cain's facebook page" />
                     </a>
                 </li>
             </ul>
