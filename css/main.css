@@ -604,8 +604,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     box-shadow: 0 2px 10px 5px #666;
     background: var(--orange);
