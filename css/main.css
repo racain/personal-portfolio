@@ -265,6 +265,7 @@ label {
 }
 
 #about p {
+  text-indent: 25px;
   margin: 1em auto;
 }
 
