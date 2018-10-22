@@ -110,6 +110,11 @@ textarea {
   src: url("../fonts/badass.otf");
 }
 
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+
 /* Core Styles ============================================*/
 
 * {
@@ -159,7 +164,7 @@ h3 {
 }
 
 p {
-  font-family: sans-serif;
+  font-family: roboto;
   font-size: 1.2em;
   line-height: 1.6em;
 }
@@ -171,6 +176,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+label {
+  font-family: roboto, sans-serif;
 }
 
 #bot-field {
@@ -225,19 +234,22 @@ a {
 }
 
 #showcase a {
+  color: #fff;
   width: 50%;
-  margin-bottom: 1em;
+  background: #2471a3;
   display: inline-block;
   margin: 25px auto;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bolder;
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px #fff;
 }
 
 /* About ============================================*/
 
 #about {
-  background: #f2f2f2;
+  background: #fff;
   color: #333;
   border-top: 3px solid #2471a3;
 }
@@ -264,7 +276,9 @@ a {
 }
 
 #about figcaption {
+  font-family: roboto, sans-serif;
   font-size: 1.25em;
+  font-weight: bold;
   width: 100%;
   color: #333;
 }
@@ -273,8 +287,10 @@ a {
   width: 200px;
   height: 200px;
   margin: 1em auto;
+  border: 4px solid var(--orange);
   border-radius: 50%;
-  box-shadow: 0 5px 10px #333;
+  padding: 10px;
+  box-shadow: 0 8px 15px #333;
 }
 
 #about div.container {
@@ -381,7 +397,7 @@ a {
 
 #contact form label {
   color: #fff;
-  font-family: roboto-condensed;
+  font-family: roboto, sans-serif;
 }
 
 #contact form input,
@@ -670,7 +686,8 @@ a {
   /* About section styles for desktop screen sizes */
 
   .btn {
-    width: 50%;
+    width: 30%;
+    height: 50px;
   }
 
   #about {
