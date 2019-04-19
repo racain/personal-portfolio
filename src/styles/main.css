@@ -468,7 +468,7 @@ label {
 .footer ul {
   margin-top: 1.5em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
 
@@ -675,7 +675,7 @@ label {
     width: 75%;
     margin: 1.5em auto 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
@@ -769,7 +769,7 @@ label {
     width: 50%;
     margin: 1.5em auto 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
