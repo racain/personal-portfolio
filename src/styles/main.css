@@ -431,7 +431,7 @@ label {
   margin-top: 1.25em;
   width: 65%;
   height: 4em;
-  border: 3px solid #333;
+  border: 3px solid var(--orange);
   border-radius: 50px;
   color: var(--orange);
   box-shadow: 0px 3px 20px #333;
@@ -441,6 +441,7 @@ label {
 #contact form input#submit-btn:hover {
   background-color: var(--orange);
   color: #fff;
+  border: 3px solid #000;
 }
 
 /* Footer ============================================*/
