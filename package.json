@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/racain/ryancain-portfolio.git"
+  },
+  "keywords": [
+    "ryan",
+    "cain",
+    "web",
+    "developer",
+    "website",
+    "portfolio",
+    "web",
+    "design"
+  ],
+  "author": "Ryan Cain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/racain/ryancain-portfolio/issues"
+  },
+  "homepage": "https://github.com/racain/ryancain-portfolio#readme",
+  "dependencies": {
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
+  }
+}

@@ -189,7 +189,6 @@ label {
 .btn {
   background: #fff;
   color: #333;
-  padding: 15px 10px;
   border-radius: 15px;
 }
 
@@ -202,7 +201,7 @@ label {
   align-content: center;
   width: 100vw;
   height: 100vh;
-  background: url("../img/web-dev.jpg");
+  background: url("../../img/web-dev.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -239,6 +238,7 @@ label {
   background: #2471a3;
   display: inline-block;
   margin: 25px auto;
+  padding: 15px 0;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bolder;
