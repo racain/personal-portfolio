@@ -82,18 +82,18 @@
 
                 <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" />
+                    <input type="text" id="firstName" name="firstName" required />
 
                     <label for="lastName">Last Name</label>
                     <input type="text" id="lastName" name="lastName" />
 
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" />
+                    <input type="text" id="email" name="email" required />
 
                     <input id="bot-field" name="bot-field" />
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message" required></textarea>
 
                     <input type="submit" name="submit" class="btn" id="submit-btn" />
                 </form>
