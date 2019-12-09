@@ -7,7 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server --output-public-path=/build/"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,13 @@
     "url": "https://github.com/racain/ryancain-portfolio/issues"
   },
   "homepage": "https://github.com/racain/ryancain-portfolio#readme",
-  "dependencies": {
-    "webpack": "^4.29.6"
-  },
   "devDependencies": {
-    "webpack-cli": "^3.3.0"
+    "css-loader": "^3.2.1",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
