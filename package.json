@@ -31,6 +31,10 @@
   },
   "homepage": "https://github.com/racain/ryancain-portfolio#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.1.0",
     "css-loader": "^3.4.2",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.0",
