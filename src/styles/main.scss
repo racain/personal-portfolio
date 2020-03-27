@@ -1,0 +1,784 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Colors */
+
+$blue: #2471a3;
+$black: #000;
+$darkGray: #333;
+$orange: #ff8500;
+$white: #fff;
+
+/*  Fonts ============================================*/
+
+/* @font-face {
+  font-family: "badass";
+  src: url("../fonts/badass.otf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/roboto/Roboto-Light.ttf");
+} */
+
+/* Core Styles ============================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  font-family: roboto-condensed;
+  font-size: 1em;
+}
+
+.row {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#bot-field {
+  display: none;
+}
+
+/* Header ============================================*/
+
+.showcase {
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("/img/web-dev.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center;
+
+  .showcase-overlay {
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0.5em;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 25px 5px $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .showcase-heading {
+    color: $white;
+    font-size: 4em;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .showcase-message {
+    font-family: badass, serif;
+    font-size: 3em;
+  }
+
+  .showcase-cta {
+    color: $white;
+    width: 50%;
+    background: $blue;
+    display: inline-block;
+    margin: 25px auto;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 1.05em;
+    border: 2px solid #222;
+    box-shadow: 0 3px 25px $black;
+  }
+}
+
+/* About ============================================*/
+
+.about {
+  background: $white;
+  color: $darkGray;
+  border-top: 3px solid $blue;
+
+  .about-text {
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 25px;
+    padding: 1em;
+    margin-top: 0;
+  }
+
+  figure {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 1em auto;
+      border: 10px solid $blue;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 10px 25px #999;
+      text-align: center;
+    }
+
+    figcaption {
+      font-family: roboto, sans-serif;
+      font-size: 1.25em;
+      font-weight: bold;
+      line-height: 1.4em;
+      width: 100%;
+      color: $darkGray;
+    }
+  }
+}
+
+/*  Services ==========================================*/
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
+  background: $blue;
+  color: $white;
+  border-top: 3px solid #999;
+
+  h3 {
+    color: $white;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    li {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 0.5em 0;
+      margin-bottom: 2em;
+
+      img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}
+
+/* Contact/Form ============================================*/
+
+.contact {
+  display: block;
+  background: $white;
+  padding: 1em 0 4em;
+  border-top: 3px solid $orange;
+
+  h3 {
+    color: $orange;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background: $blue;
+    border: 2px solid $white;
+    border-radius: 25px;
+    box-shadow: 0 2px 15px 2px $black;
+    padding: 1.5em 2em 2em;
+    margin-bottom: 2em;
+
+    label {
+      color: $white;
+      font-family: roboto, sans-serif;
+    }
+
+    input,
+    textarea {
+      margin: 0.5em auto;
+      border: 1px solid $darkGray;
+      border-radius: 5px;
+      box-shadow: 2px 2px 15px 1px $darkGray;
+    }
+
+    input {
+      width: 100%;
+      height: 3.5em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 25em;
+      padding: 10px 15px;
+    }
+
+    .submit-btn {
+      background: $orange;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-top: 1.25em;
+      width: 65%;
+      height: 3em;
+      border-radius: 50px;
+      color: $white;
+      box-shadow: 0px 5px 20px $darkGray;
+      font-size: 1em;
+    }
+  }
+}
+
+/* Footer ============================================*/
+
+.footer {
+  padding: 1em 1em 2em;
+  background: $darkGray;
+  color: $white;
+  text-align: center;
+  border-top: 5px solid $orange;
+
+  p {
+    text-indent: 0;
+    margin-top: 0.5em;
+    font-size: 1.25em;
+  }
+
+  ul {
+    margin-top: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+
+    li {
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media (min-width: 600px) {
+  /*About section styles on Tablet */
+
+  .about .container {
+    overflow: hidden;
+  }
+
+  .about figure {
+    width: 45%;
+    float: left;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .about figcaption {
+    margin: 0 auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .about p {
+    width: 50%;
+    float: right;
+    padding: 0;
+    line-height: 1.6em;
+  }
+
+  .about div.container #cta-hire {
+    margin-top: 1em;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about button {
+    margin: 2em auto;
+    width: 50%;
+  }
+
+  .about #cta-hire p {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  .about #cta-hire p span {
+    font-style: italic;
+  }
+
+  /* Services section styles for tablets */
+
+  .services ul {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    padding-bottom: 3em;
+  }
+
+  .services ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .services ul li p {
+    text-indent: 0;
+  }
+
+  .services ul li img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Contact/Form styles for tablets */
+
+  .contact {
+    display: block;
+  }
+
+  .contact .container {
+    text-align: center;
+  }
+
+  .contact form {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .contact form label {
+    text-align: left;
+  }
+
+  /* Footer section styles for tablets */
+
+  .footer .container {
+    width: 45%;
+  }
+
+  .footer ul {
+    width: 75%;
+    margin: 1.5em auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  .footer ul li {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .footer ul li img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 960px) {
+  /* Showcase area styles for desktop screens */
+
+  #showcase h1 {
+    font-size: 6em;
+  }
+  #showcase button {
+    width: 20%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #showcase button:hover {
+    transform: scale(1.075);
+  }
+
+  /* About section styles for desktop screen sizes */
+
+  .btn {
+    width: 30%;
+    height: 50px;
+  }
+
+  #about {
+    padding: 0 0 3.5em;
+  }
+
+  #about div.container {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  #about button:hover {
+    font-weight: bolder;
+  }
+
+  #about .container#cta-hire {
+    margin: -7em 0 0;
+    float: right;
+  }
+
+  #about .container#cta-hire a:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  /* Services section styles for desktop screen sizes */
+
+  #services ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #services ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Contact section styles for desktop screen sizes */
+
+  #contact {
+    display: block;
+  }
+
+  #contact form {
+    width: 45%;
+  }
+
+  #contact form input#submit-btn {
+    width: 45%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #contact form input#submit-btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  /* Footer section styles for desktop screen sizes */
+
+  .footer ul {
+    width: 50%;
+    margin: 1.5em auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  .footer ul li {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid $white; */
+    border-radius: 50%;
+    padding: 0.5em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer ul li:hover {
+    transform: scale(1.25, 1.25);
+  }
+
+  .footer ul li img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: $black !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
