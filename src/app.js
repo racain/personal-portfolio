@@ -1,5 +1,5 @@
 import './styles/normalize.scss'
 import './styles/main.scss';
-import sayHello from './js/sayHello';
+import FlashMessage from './js/components/MessgeFlash';
 
-sayHello('Ryan');
+FlashMessage();
