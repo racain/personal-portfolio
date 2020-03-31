@@ -1,3 +1,3 @@
 //import './styles/normalize.scss'
 //import './styles/main.scss';
-import './js/components/MessgeFlash';
+import './js/components/MessageFlash';
