@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-# Ignore build
-build
-
->>>>>>> develop
 # Ignore node_modules
 node_modules
 
