@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+=======
+# Ignore build
+build
+
+>>>>>>> develop
+# Ignore node_modules
+node_modules
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore .env files
+.env
+.env.local
+
