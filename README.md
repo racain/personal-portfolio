@@ -1,3 +1,0 @@
-# personal-portfolio
-This is my personal website that will showcase my current projects that I'm working on as well as give an insight to some of my personal hobbies and interests. This is an ongoing work in progress :smile_cat: :v: :us:
-
