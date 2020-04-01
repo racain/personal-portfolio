@@ -40,7 +40,7 @@
     <main>
         <section class="row about" id="about">
             <div class="about-col-1">
-                <figure>
+                <figure "about-figure">
                     <img src="img/self-portrait.jpg" alt="Ryan Cain, Web Developer" />
                     <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
                 </figure>
@@ -83,20 +83,24 @@
 
         <section class="row contact">
             <h3 class="contact-header">Let's chat...</h3>
-            <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required />
+            <form class="contact-form" name="form" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                <label for="firstName">First Name
+                    <input type="text" id="firstName" name="firstName" required />
+                </label>
 
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" />
+                <label for="lastName">Last Name
+                    <input type="text" id="lastName" name="lastName" />
+                </label>
 
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required />
+                <label for="email">Email
+                    <input type="text" id="email" name="email" required />
+                </label>
 
                 <input id="bot-field" name="bot-field" />
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message
+                    <textarea id="message" name="message" required></textarea>
+                </label>
 
                 <input type="submit" name="submit" class="btn submit-btn" />
             </form>
@@ -105,7 +109,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>Ryan Cain &copy; 2018</p>
+            <p>Ryan Cain &copy; <span class='copyright-year'></span></p>
             <ul>
                 <li class="social-icon">
                     <a href="https://twitter.com/ryancain_webdev" target="_blank">

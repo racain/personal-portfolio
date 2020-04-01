@@ -120,6 +120,9 @@ $white: #fff;
 */
 
 /* Core Styles ============================================*/
+/* ========================
+    MOBILE STYLES
+ =========================*/
 
 * {
   box-sizing: border-box;
@@ -151,6 +154,7 @@ p {
 }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -213,23 +217,25 @@ h3[class$="-header"] {
   .showcase-cta {
     color: $white;
     cursor: pointer;
-    width: 50%;
+    width: 55%;
     background: $blue;
     display: inline-block;
     margin: 25px auto;
-    padding: 15px 0;
+    padding: 20px;
     text-transform: uppercase;
     font-size: 1.05em;
-    border: 2px solid #222;
+    border: 1px solid #222;
     border-radius: 50px;
-    box-shadow: 0 3px 25px $black;
+    //box-shadow: 0 3px 25px $black;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
 /* About ============================================*/
 
 .about {
-  background: $white;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%232471a3' fill-opacity='0.1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: $darkGray;
   border-top: 3px solid $blue;
   display: grid;
@@ -276,6 +282,7 @@ h3[class$="-header"] {
       color: #fff;
       padding-bottom: 2em;
       width: 75%;
+      max-width: 300px;
     }
 
     .interests-list li {
@@ -293,6 +300,7 @@ h3[class$="-header"] {
   }
 
   .about-text {
+    background: rgba(255, 255, 255, 0.4);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     text-indent: 25px;
@@ -301,7 +309,6 @@ h3[class$="-header"] {
   }
 
   figure {
-    background-color: #f8f8ff;
     margin: 0 auto;
     padding: 1em 0 2em;
     width: 100%;
@@ -350,18 +357,17 @@ h3[class$="-header"] {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
+    align-items: center;
     margin-bottom: 1em;
 
     li {
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
-      margin: 0.5em 0;
-      margin-bottom: 2em;
+      padding: 1em;
 
       img {
         width: 75px;
         height: 75px;
-        margin-bottom: 1.5em;
       }
     }
   }
@@ -372,14 +378,15 @@ h3[class$="-header"] {
 .contact {
   display: block;
   background: $white;
-  padding: 1em 0 4em;
+  padding: 0 1em 5em;
   border-top: 3px solid $orange;
 
-  h3 {
+  .contact-header {
     color: $orange;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
   }
 
-  form {
+  .contact-form {
     display: flex;
     flex-direction: column;
     background: $blue;
@@ -387,16 +394,18 @@ h3[class$="-header"] {
     border-radius: 25px;
     box-shadow: 0 2px 15px 2px $black;
     padding: 1.5em 2em 2em;
-    margin-bottom: 2em;
 
     label {
       color: $white;
       font-family: roboto, sans-serif;
+      font-size: 1.25em;
+      margin-top: 1em;
     }
 
     input,
     textarea {
-      margin: 0.5em auto;
+      font-size: 1em;
+      margin: 0.75em auto;
       border: 1px solid $darkGray;
       border-radius: 5px;
       box-shadow: 2px 2px 15px 1px $darkGray;
@@ -404,27 +413,26 @@ h3[class$="-header"] {
 
     input {
       width: 100%;
-      height: 3.5em;
+      height: 2.5em;
     }
 
     textarea {
       width: 100%;
-      height: 25em;
-      padding: 10px 15px;
+      height: 15em;
     }
 
     .submit-btn {
-      background: $orange;
+      color: #fff;
       cursor: pointer;
-      text-transform: uppercase;
+      width: 55%;
       font-weight: bold;
-      margin-top: 1.25em;
-      width: 65%;
-      height: 3em;
+      background: $orange;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 1.05em;
+      border: 1px solid #222;
       border-radius: 50px;
-      color: $white;
-      box-shadow: 0px 5px 20px $darkGray;
-      font-size: 1em;
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -553,12 +561,24 @@ Tablet / Medium screen size styles
 ========================================
 */
 
-@media (min-width: 730px) {
+@media (min-width: 600px) {
+  .showcase {
+    .showcase-message {
+      margin: 0.5em auto;
+    }
+
+    .showcase-cta {
+      margin: 0;
+    }
+  }
+
   .about {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "fig fig list"
+      "par par par";
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
     .about-col-1,
     .about-col-2 {
       padding-bottom: 3em;
@@ -569,7 +589,8 @@ Tablet / Medium screen size styles
       padding-top: 2em;
     }
 
-    figure {
+    .about-figure {
+      grid-area: "fig";
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
       padding: 2em 0;
@@ -581,8 +602,16 @@ Tablet / Medium screen size styles
       border-bottom-left-radius: 15px;
     }
 
+    .about-list {
+      grid-area: "list";
+    }
+
     .about-text {
+      grid-area: "par";
+      position: relative;
       line-height: 1.6em;
+      width: 100%;
+      z-index: 2;
     }
   }
 
@@ -603,16 +632,13 @@ Tablet / Medium screen size styles
     .services-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(auto);
+      grid-template-rows: auto;
       justify-content: center;
       align-items: center;
       margin-bottom: 1em;
 
       li {
         font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        margin: 0.5em 0;
-        margin-bottom: 2em;
 
         img {
           width: 75px;
@@ -696,10 +722,6 @@ Desktop styles
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    .about-col-1 {
-      background-color: #f8f8ff;
-    }
 
     .about-col-2 {
       .interests-list {
