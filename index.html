@@ -18,6 +18,7 @@
     <meta name="description" content="">
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Place favicon icon in the root directory -->
 </head>
 
@@ -38,16 +39,29 @@
 
     <main>
         <section class="row about" id="about">
-            <figure>
-                <img src="img/self-portrait.jpg" alt="Ryan Cain, Web Developer" />
-                <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
-            </figure>
-            <p class="about-text">My name is Ryan Cain and I build websites for small businesses looking to create or expand their online presence. Do you need a website so your customers can find out more about your products or services? Do you want a website that looks great on all screen sizes? There are many devices, from small mobile phones to large desktop computers, that display your website and it should look clean and professional on all of them. I can help you put your business on the web and make sure your customers can easily find the information they are looking for no matter the device they use.</p>
+            <div class="about-col-1">
+                <figure>
+                    <img src="img/self-portrait.jpg" alt="Ryan Cain, Web Developer" />
+                    <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
+                </figure>
+                <p class="about-text">My name is Ryan Cain and I build websites for small businesses looking to create or expand their online presence. Do you need a website so your customers can find out more about your products or services? Do you want a website that looks great on all screen sizes? There are many devices, from small mobile phones to large desktop computers, that display your website and it should look clean and professional on all of them. I can help you put your business on the web and make sure your customers can easily find the information they are looking for no matter the device they use.</p>
+            </div>
+            <div class="about-col-2">
+                <div class="interests-list">
+                    <h3 class="interests-list-header">Proficiencies</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js-square"></i> JS</li>
+                        <li><i class="fab fa-git-square"></i> Git</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="row services">
             <h3 class="services-header">Services Provided</h3>
-            <ul class="services__list">
+            <ul class="services-list">
                 <li>
                     <img src="img/web-dev-icon-200.png" alt="" />
                     Website Development

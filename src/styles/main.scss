@@ -108,14 +108,16 @@ $white: #fff;
 
 /*  Fonts ============================================*/
 
-/* @font-face {
+/*
+@font-face {
   font-family: "badass";
-  src: url("../fonts/badass.otf");
+  src: url("./fonts/badass.otf");
 }
 @font-face {
   font-family: "roboto";
-  src: url("../fonts/roboto/Roboto-Light.ttf");
-} */
+  src: url("./fonts/roboto/Roboto-Light.ttf");
+}
+*/
 
 /* Core Styles ============================================*/
 
@@ -199,11 +201,13 @@ h3[class$="-header"] {
     font-size: 4em;
     letter-spacing: 0.05em;
     margin: 0;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
   .showcase-message {
     font-family: badass, serif;
     font-size: 3em;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
   .showcase-cta {
@@ -217,7 +221,7 @@ h3[class$="-header"] {
     text-transform: uppercase;
     font-size: 1.05em;
     border: 2px solid #222;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0 3px 25px $black;
   }
 }
@@ -228,17 +232,78 @@ h3[class$="-header"] {
   background: $white;
   color: $darkGray;
   border-top: 3px solid $blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+
+  .about-col-1,
+  .about-col-2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-col-2 {
+    margin: 1em 0 0;
+    padding: 0 0 3em;
+
+    .interests-list-header {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: 5px solid #fff;
+      font-size: 2em;
+      width: 100%;
+      margin: 0;
+      background-color: #333;
+      padding: 15px 0;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .interests-list {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      background: $orange;
+      color: #fff;
+      padding-bottom: 2em;
+      width: 75%;
+    }
+
+    .interests-list li {
+      font-size: 1.5em;
+      margin-top: 0.75em;
+    }
+
+    .interests-list li {
+      color: #fff;
+    }
+
+    .interests-list li svg {
+      margin-right: 0.75em;
+    }
+  }
 
   .about-text {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
     text-indent: 25px;
     padding: 1em;
     width: 100%;
   }
 
   figure {
+    background-color: #f8f8ff;
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 1em 0 2em;
     width: 100%;
     text-align: center;
 
@@ -260,6 +325,7 @@ h3[class$="-header"] {
       line-height: 1.4em;
       width: 100%;
       color: $darkGray;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -275,11 +341,12 @@ h3[class$="-header"] {
   color: $white;
   border-top: 3px solid #999;
 
-  h3 {
+  .services-header {
     color: $white;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
-  ul {
+  .services-list {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -480,83 +547,80 @@ h3[class$="-header"] {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/*
+========================================
+Tablet / Medium screen size styles
+========================================
+*/
 
-@media (min-width: 600px) {
-  /*About section styles on Tablet */
+@media (min-width: 730px) {
+  .about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
 
-  .about .container {
-    overflow: hidden;
+    .about-col-1,
+    .about-col-2 {
+      padding-bottom: 3em;
+    }
+
+    .about-col-2 {
+      align-self: flex-start;
+      padding-top: 2em;
+    }
+
+    figure {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 2em 0;
+    }
+
+    figcaption {
+      margin: 0 auto;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .about-text {
+      line-height: 1.6em;
+    }
   }
 
-  .about figure {
-    width: 45%;
-    float: left;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-
-  .about figcaption {
-    margin: 0 auto;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-
-  .about p {
-    width: 50%;
-    float: right;
-    padding: 0;
-    line-height: 1.6em;
-  }
-
-  .about div.container #cta-hire {
-    margin-top: 1em;
-    padding: 0;
-    text-align: center;
-  }
-
-  .about button {
-    margin: 2em auto;
-    width: 50%;
-  }
-
-  .about #cta-hire p {
-    width: 100%;
-    font-size: 1.5em;
-    text-align: left;
-  }
-
-  .about #cta-hire p span {
-    font-style: italic;
-  }
-
-  /* Services section styles for tablets */
-
-  .services ul {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    padding-bottom: 3em;
-  }
-
-  .services ul li {
-    display: flex;
-    flex-direction: column;
+  .services {
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-content: center;
-    align-items: center;
-  }
+    background: $blue;
+    color: $white;
+    border-top: 3px solid #999;
 
-  .services ul li p {
-    text-indent: 0;
-  }
+    .services-header {
+      color: $white;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    }
 
-  .services ul li img {
-    width: 100px;
-    height: 100px;
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto);
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0.5em 0;
+        margin-bottom: 2em;
+
+        img {
+          width: 75px;
+          height: 75px;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
   }
 
   /* Contact/Form styles for tablets */
@@ -604,81 +668,66 @@ h3[class$="-header"] {
   }
 }
 
+/*
+========================================
+Desktop styles
+========================================
+*/
+
 @media (min-width: 960px) {
-  /* Showcase area styles for desktop screens */
+  .showcase {
+    .showcase-cta {
+      width: 20%;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+    }
 
-  #showcase h1 {
-    font-size: 6em;
-  }
-  #showcase button {
-    width: 20%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #showcase button:hover {
-    transform: scale(1.075);
+    .showcase-cta:hover {
+      background-color: #fff;
+      border: 3px solid $blue;
+      color: $blue;
+      font-weight: bold;
+      transform: scale(1.025);
+    }
   }
 
   /* About section styles for desktop screen sizes */
 
-  .btn {
-    width: 30%;
-    height: 50px;
-  }
-
-  #about {
-    padding: 0 0 3.5em;
-  }
-
-  #about div.container {
-    width: 75%;
-    margin: 0 auto;
-  }
-
-  #about button:hover {
-    font-weight: bolder;
-  }
-
-  #about .container#cta-hire {
-    margin: -7em 0 0;
-    float: right;
-  }
-
-  #about .container#cta-hire a:hover {
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  /* Services section styles for desktop screen sizes */
-
-  #services ul {
+  .about {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
+    grid-template-columns: 1fr 1fr;
 
-  #services ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    .about-col-1 {
+      background-color: #f8f8ff;
+    }
+
+    .about-col-2 {
+      .interests-list {
+        width: 50%;
+      }
+
+      .interests-list {
+        width: 75%;
+      }
+    }
   }
 
   /* Contact section styles for desktop screen sizes */
 
-  #contact {
+  .contact {
     display: block;
   }
 
-  #contact form {
+  .contact form {
     width: 45%;
   }
 
-  #contact form input#submit-btn {
+  .contact form input#submit-btn {
     width: 45%;
     transition: all 0.3s ease-in-out;
   }
 
-  #contact form input#submit-btn:hover {
+  .contact form input#submit-btn:hover {
     transform: scale(1.05);
     cursor: pointer;
   }
