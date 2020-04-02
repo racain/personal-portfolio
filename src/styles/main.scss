@@ -142,8 +142,9 @@ body {
 }
 
 .row {
-  display: flex;
-  flex-flow: column nowrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   width: 100%;
 }
 
@@ -238,65 +239,49 @@ h3[class$="-header"] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%232471a3' fill-opacity='0.1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: $darkGray;
   border-top: 3px solid $blue;
+  justify-content: center;
+  align-items: center;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
 
-  .about-col-1,
-  .about-col-2 {
+  .about-list {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    background: $orange;
+    color: #fff;
+    margin: 0 auto 4em;
+    padding-bottom: 2em;
+    width: 75%;
+    max-width: 300px;
+  }
+  .about-list-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 5px solid #fff;
+    font-size: 2em;
+    width: 100%;
+    margin: 0;
+    background-color: #333;
+    padding: 15px 0;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
-  .about-col-2 {
-    margin: 1em 0 0;
-    padding: 0 0 3em;
+  .about-list li {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 0.75em;
+  }
 
-    .interests-list-header {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      border-bottom: 5px solid #fff;
-      font-size: 2em;
-      width: 100%;
-      margin: 0;
-      background-color: #333;
-      padding: 15px 0;
-      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .interests-list {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      background: $orange;
-      color: #fff;
-      padding-bottom: 2em;
-      width: 75%;
-      max-width: 300px;
-    }
-
-    .interests-list li {
-      font-size: 1.5em;
-      margin-top: 0.75em;
-    }
-
-    .interests-list li {
-      color: #fff;
-    }
-
-    .interests-list li svg {
-      margin-right: 0.75em;
-    }
+  .about-list li svg {
+    margin-right: 0.75em;
   }
 
   .about-text {
@@ -574,44 +559,44 @@ Tablet / Medium screen size styles
 
   .about {
     display: grid;
-    grid-template-areas:
-      "fig fig list"
-      "par par par";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    .about-col-1,
-    .about-col-2 {
-      padding-bottom: 3em;
-    }
-
-    .about-col-2 {
-      align-self: flex-start;
-      padding-top: 2em;
-    }
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
 
     .about-figure {
-      grid-area: "fig";
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
-      padding: 2em 0;
-    }
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      /* padding: 1em 0 2em; */
+      width: 100%;
+      margin: 0;
+      text-align: center;
 
-    figcaption {
-      margin: 0 auto;
-      border-bottom-right-radius: 15px;
-      border-bottom-left-radius: 15px;
-    }
-
-    .about-list {
-      grid-area: "list";
+      figcaption {
+        margin: 0 auto;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
     }
 
     .about-text {
-      grid-area: "par";
-      position: relative;
+      grid-column: 1/3;
+      grid-row: 2/3;
       line-height: 1.6em;
       width: 100%;
-      z-index: 2;
+    }
+
+    .about-list {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
     }
   }
 
@@ -720,68 +705,59 @@ Desktop styles
   /* About section styles for desktop screen sizes */
 
   .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .about-col-2 {
-      .interests-list {
-        width: 50%;
-      }
-
-      .interests-list {
-        width: 75%;
-      }
+    .interests-list {
+      width: 75%;
     }
   }
+}
 
-  /* Contact section styles for desktop screen sizes */
+/* Contact section styles for desktop screen sizes */
 
-  .contact {
-    display: block;
-  }
+.contact {
+  display: block;
+}
 
-  .contact form {
-    width: 45%;
-  }
+.contact form {
+  width: 45%;
+}
 
-  .contact form input#submit-btn {
-    width: 45%;
-    transition: all 0.3s ease-in-out;
-  }
+.contact form input#submit-btn {
+  width: 45%;
+  transition: all 0.3s ease-in-out;
+}
 
-  .contact form input#submit-btn:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
+.contact form input#submit-btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
-  /* Footer section styles for desktop screen sizes */
+/* Footer section styles for desktop screen sizes */
 
-  .footer ul {
-    width: 50%;
-    margin: 1.5em auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-  }
+.footer ul {
+  width: 50%;
+  margin: 1.5em auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
 
-  .footer ul li {
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    /* border: 1px solid $white; */
-    border-radius: 50%;
-    padding: 0.5em;
-    transition: all 0.3s ease-in-out;
-  }
+.footer ul li {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  /* border: 1px solid $white; */
+  border-radius: 50%;
+  padding: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
 
-  .footer ul li:hover {
-    transform: scale(1.25, 1.25);
-  }
+.footer ul li:hover {
+  transform: scale(1.25, 1.25);
+}
 
-  .footer ul li img {
-    width: 50px;
-    height: 50px;
-  }
+.footer ul li img {
+  width: 50px;
+  height: 50px;
 }
 
 /* ==========================================================================
