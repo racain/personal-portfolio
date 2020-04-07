@@ -181,8 +181,8 @@ h3[class$="-header"] {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: url("/img/web-dev.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -648,10 +648,6 @@ Tablet / Medium screen size styles
   /* Contact/Form styles for tablets */
 
   .contact {
-    .contact-form {
-      width: 80%;
-    }
-
     .contact-form label {
       text-align: left;
     }
@@ -723,9 +719,6 @@ Desktop styles
   }
 
   .contact-form {
-    margin: 0 auto;
-    width: 80%;
-
     label {
       text-align: left;
     }
