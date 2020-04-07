@@ -654,13 +654,8 @@ Tablet / Medium screen size styles
   /* Contact (medium screen)
   =========================== */
   .contact {
-<<<<<<< HEAD
-    .contact-form label {
-      text-align: left;
-=======
     .contact-form {
       width: 80%;
->>>>>>> develop
     }
   }
 
@@ -738,22 +733,6 @@ Desktop styles
     text-align: center;
   }
 
-<<<<<<< HEAD
-  .contact-form {
-    label {
-      text-align: left;
-    }
-
-    input#submit-btn {
-      width: 45%;
-      transition: all 0.3s ease-in-out;
-    }
-
-    input#submit-btn:hover {
-      transform: scale(1.05);
-      cursor: pointer;
-    }
-=======
   .footer ul li {
     width: auto;
     height: auto;
@@ -762,7 +741,6 @@ Desktop styles
     border-radius: 50%;
     padding: 0.5em;
     transition: all 0.3s ease-in-out;
->>>>>>> develop
   }
 
   .footer ul li:hover {
