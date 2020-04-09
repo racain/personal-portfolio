@@ -575,12 +575,19 @@ Tablet / Medium screen size styles
   /* About (medium screen)
   =========================== */
   .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    padding: 2em 0.5em;
+    width: 100%;
+
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 2em 0.5em;
+      width: 80%;
+      max-width: 1200px;
+    }
 
     .about-figure-container {
       grid-column: 1/2;
@@ -697,7 +704,8 @@ Desktop styles
     .showcase-cta {
       width: 20%;
       cursor: pointer;
-      transition: all 0.25s ease-in-out;
+      border: 3px solid #fff;
+      transition: background 0.75s ease-in-out;
     }
 
     .showcase-cta:hover {
@@ -705,7 +713,6 @@ Desktop styles
       border: 3px solid $blue;
       color: $blue;
       font-weight: bold;
-      transform: scale(1.025);
     }
   }
 
@@ -720,7 +727,7 @@ Desktop styles
   /* Contact section styles for desktop screen sizes */
   .contact {
     .contact-form {
-      width: 50%;
+      width: 45%;
     }
   }
 
