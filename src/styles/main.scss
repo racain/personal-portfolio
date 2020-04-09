@@ -622,6 +622,22 @@ Tablet / Medium screen size styles
       justify-content: center;
       align-items: center;
       margin: 0 auto;
+
+      .about-list {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+
+        .about-list-item {
+          width: 100%;
+          padding: 0.75em 0;
+          font-size: 1.25em;
+        }
+
+        .about-list li svg {
+        margin-right: 0.75em;
+        }
+      }
     }
   }
 
@@ -635,6 +651,12 @@ Tablet / Medium screen size styles
     background: $blue;
     color: $white;
     border-top: 3px solid #999;
+
+    .services-wrapper {
+      margin: 0 auto;
+      max-width: 1200px;
+      width: 80%;
+    }
 
     .services-header {
       color: $white;
@@ -674,7 +696,7 @@ Tablet / Medium screen size styles
     width: 100%;
   }
 
-  ul {
+  .social-list {
     width: 75%;
     margin: 1.5em auto 0;
     display: grid;
@@ -682,17 +704,18 @@ Tablet / Medium screen size styles
     text-align: center;
   }
 
-  ul li {
+  .social-list-item {
     width: auto;
     height: auto;
     margin: 0 auto;
   }
 
-  ul li img {
+  .social-list-item > img {
     width: 50px;
     height: 50px;
   }
 }
+
 /*
 ========================================
 Desktop styles
@@ -715,6 +738,7 @@ Desktop styles
       font-weight: bold;
     }
   }
+  
 
   /* About section styles for desktop screen sizes */
 
@@ -733,14 +757,14 @@ Desktop styles
 
   /* Footer section styles for desktop screen sizes */
 
-  .footer ul {
+  .social-list {
     margin: 1.5em auto 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
-  .footer ul li {
+  .social-list-item {
     width: auto;
     height: auto;
     margin: 0 auto;
@@ -750,11 +774,11 @@ Desktop styles
     transition: all 0.3s ease-in-out;
   }
 
-  .footer ul li:hover {
+  .social-list-item:hover {
     transform: scale(1.25, 1.25);
   }
 
-  .footer ul li img {
+  .social-list-item > img {
     width: 50px;
     height: 50px;
   }
