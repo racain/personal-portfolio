@@ -1,6 +1,5 @@
 const path = require('path');
 
-// SASS compiler to CSS
 module.exports = {
   mode: 'production',
   entry: {
