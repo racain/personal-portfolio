@@ -310,6 +310,10 @@ h3[class$="-header"] {
     text-indent: 25px;
     padding: 1em;
     width: 100%;
+
+    .github-link {
+      text-decoration: underline;
+    }
   }
 
   .resume-cta-container {
