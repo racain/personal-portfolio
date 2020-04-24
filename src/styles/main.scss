@@ -106,19 +106,6 @@ $darkGray: #333;
 $orange: #ff8500;
 $white: #fff;
 
-/*  Fonts ============================================*/
-
-/*
-@font-face {
-  font-family: "badass";
-  src: url("./fonts/badass.otf");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("./fonts/roboto/Roboto-Light.ttf");
-}
-*/
-
 /* Core Styles ============================================*/
 /* ========================
     MOBILE STYLES
@@ -137,7 +124,7 @@ body {
   display: flex;
   flex-direction: column;
   color: $white;
-  font-family: roboto-condensed;
+  font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
 
@@ -148,8 +135,19 @@ body {
   width: 100%;
 }
 
+h1,
+h2 {
+  font-family: "IM Fell Double Pica", serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+
 p {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   line-height: 1.6em;
 }
@@ -179,6 +177,7 @@ a {
   display: none;
 }
 
+h2[class$="-header"],
 h3[class$="-header"] {
   font-size: 2.5em;
   text-align: center;
@@ -222,7 +221,6 @@ h3[class$="-header"] {
   }
 
   .showcase-message {
-    font-family: badass, serif;
     font-size: 3em;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
@@ -312,7 +310,6 @@ h3[class$="-header"] {
 
   .about-text {
     background: rgba(255, 255, 255, 0.4);
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     text-indent: 25px;
     padding: 1em;
@@ -332,6 +329,7 @@ h3[class$="-header"] {
     .resume-cta {
       background: $blue;
       color: $white;
+      border: 1px solid #333;
     }
   }
 
@@ -342,8 +340,8 @@ h3[class$="-header"] {
     text-align: center;
 
     img {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       margin: 1em auto;
       border: 10px solid $blue;
       border-radius: 50%;
@@ -353,7 +351,6 @@ h3[class$="-header"] {
     }
 
     figcaption {
-      font-family: roboto, sans-serif;
       font-size: 1.25em;
       font-weight: bold;
       line-height: 1.4em;
@@ -477,7 +474,6 @@ h3[class$="-header"] {
 
     label {
       color: $white;
-      font-family: roboto, sans-serif;
       font-size: 1.25em;
       margin-top: 1em;
     }
@@ -647,6 +643,10 @@ Tablet / Medium screen size styles
   =========================== */
 
   .showcase {
+    .showcase-heading {
+      font-size: 5em;
+    }
+
     .showcase-message {
       margin: 0.5em auto;
     }
