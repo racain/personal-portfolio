@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an ongoing project that will change over time as I learn new development skills and techniques.",
   "main": "./src/app.js",
   "directories": {
     "doc": "doc"
@@ -32,11 +32,14 @@
   "homepage": "https://github.com/racain/ryancain-portfolio#readme",
   "devDependencies": {
     "css-loader": "^3.2.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
-    "webpack": "^4.41.2",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "serialize-javascript": "^4.0.0"
   }
 }
