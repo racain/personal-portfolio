@@ -14,6 +14,7 @@ html {
   color: #222;
   font-size: 16px;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -105,23 +106,12 @@ $darkGray: #333;
 $orange: #ff8500;
 $white: #fff;
 
-/*  Fonts ============================================*/
-
-/* @font-face {
-  font-family: "badass";
-  src: url("../fonts/badass.otf");
-}
-
-@font-face {
-  font-family: "roboto";
-  src: url("../fonts/roboto/Roboto-Light.ttf");
-} */
-
 /* Core Styles ============================================*/
+/* ========================
+    MOBILE STYLES
+ =========================*/
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -131,42 +121,39 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+.row {
   display: grid;
   grid-template-columns: 1fr;
-  background: $blue;
-  color: $white;
-  font-family: roboto-condensed;
-  font-size: 16px;
+  grid-template-rows: 1fr;
+  width: 100%;
 }
 
 h1,
-h2,
-h3 {
-  font-family: badass, serif;
-  font-weight: bolder;
-  color: $orange;
-  text-align: center;
+h2 {
+  font-family: "IM Fell Double Pica", serif;
 }
 
-h3 {
-  color: $white;
-  font-size: 3.5em;
-  letter-spacing: 0.09em;
-  text-shadow: 1px 1px 1px $white;
-  margin: 0.75em auto;
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web", sans-serif;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   line-height: 1.6em;
 }
 
-figcaption {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 ul {
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -175,30 +162,30 @@ a {
   text-decoration: none;
 }
 
-label {
-  font-family: roboto, sans-serif;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1200px;
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  margin: 25px auto;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1.05em;
+  border-radius: 50px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #bot-field {
   display: none;
 }
 
-.btn {
-  background: $white;
-  color: $darkGray;
-  border-radius: 15px;
-  transition: background 0.75s ease-in-out;
+h2[class$="-header"],
+h3[class$="-header"] {
+  font-size: 2.5em;
+  text-align: center;
 }
 
 /* Header ============================================*/
 
-#showcase {
+.showcase {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -206,13 +193,13 @@ label {
   align-content: center;
   width: 100vw;
   height: 100vh;
-  //background: url("../../img/web-dev.jpg");
+  background: url("https://res.cloudinary.com/img-assets/image/upload/c_scale,f_auto,h_1080,w_1920/v1587754435/web-dev_fhtfbe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
   text-align: center;
 
-  .overlay {
+  .showcase-overlay {
     background-attachment: fixed;
     width: 100%;
     height: 100%;
@@ -225,113 +212,235 @@ label {
     justify-content: center;
   }
 
-  h1 {
+  .showcase-heading {
     color: $white;
     font-size: 4em;
     letter-spacing: 0.05em;
     margin: 0;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
-  p {
-    font-family: badass, serif;
+  .showcase-message {
     font-size: 3em;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
-  button {
+  .showcase-cta {
     color: $white;
-    width: 50%;
+    cursor: pointer;
+    width: 55%;
     background: $blue;
     display: inline-block;
     margin: 25px auto;
-    padding: 15px 0;
+    padding: 20px;
     text-transform: uppercase;
     font-size: 1.05em;
-    border: 2px solid #222;
-    box-shadow: 0 3px 25px $black;
+    border: 1px solid #222;
+    border-radius: 50px;
+    //box-shadow: 0 3px 25px $black;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
 /* About ============================================*/
 
-#about {
-  background: $white;
+.about {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%232471a3' fill-opacity='0.1'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: $darkGray;
   border-top: 3px solid $blue;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
 
-  .container {
-    padding: 1em;
-    width: 100%;
-  }
+  .about-list-container {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: $orange;
+    color: #fff;
+    margin: 2em auto 4em;
+    width: 75%;
+    max-width: 300px;
 
-  h3 {
-    margin-bottom: 0.5em;
-    font-size: 4em;
-    color: $blue;
-  }
-
-  p {
-    font-family: Arial, Helvetica, sans-serif;
-    text-indent: 25px;
-    margin: 1em auto;
-  }
-
-  figure {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-
-    figcaption {
-      font-family: roboto, sans-serif;
-      font-size: 1.25em;
-      font-weight: bold;
+    .about-list-header {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom: 5px solid #fff;
+      font-size: 2em;
       width: 100%;
-      color: $darkGray;
+      margin: 0;
+      background-color: #333;
+      padding: 15px 0;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-list {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+
+      .about-list-item {
+        padding: 0.75em 0;
+        font-size: 1.25em;
+      }
+    }
+
+    .about-list li svg {
+      margin-right: 0.75em;
     }
   }
 
-  img {
-    width: 200px;
-    height: 200px;
-    margin: 1em auto;
-    border: 4px solid $orange;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 8px 15px $darkGray;
+  .about-text-container {
+    p:first-of-type::first-letter {
+      font-size: 2.5em;
+      font-weight: bolder;
+    }
+  }
+
+  .about-text {
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0;
+    text-indent: 25px;
+    padding: 1em;
+    width: 100%;
+
+    .github-link {
+      text-decoration: underline;
+    }
+  }
+
+  .resume-cta-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .resume-cta {
+      background: $blue;
+      color: $white;
+      border: 1px solid #333;
+    }
+  }
+
+  figure {
+    margin: 0 auto 1em;
+    padding: 1em 0 0;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 1em auto;
+      border: 10px solid $blue;
+      border-radius: 50%;
+      padding: 5px;
+      box-shadow: 0 10px 25px #999;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 1.25em;
+      font-weight: bold;
+      line-height: 1.4em;
+      width: 100%;
+      color: $darkGray;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
-/*  Services ==========================================*/
+/*  recent-projects ==========================================*/
 
-#services {
+.recent-projects {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
   justify-content: center;
   align-content: center;
   background: $blue;
   color: $white;
   border-top: 3px solid #999;
+  padding-bottom: 5em;
 
-  h3 {
+  .recent-projects-header {
     color: $white;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 
-  ul {
+  .recent-projects-container {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    margin-bottom: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 2em 0;
+    width: 100%;
+    margin: 0 auto;
 
-    li {
-      font-family: Arial, Helvetica, sans-serif;
+    .project-card {
+      border-radius: 10px;
+      background: $white;
+      color: $darkGray;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      margin: 0 auto;
+      width: 75%;
+      height: auto;
       text-align: center;
-      margin: 0.5em 0;
-      margin-bottom: 2em;
 
-      img {
-        width: 75px;
-        height: 75px;
-        margin-bottom: 1.5em;
+      .project-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .project-title {
+          font-size: 1.25em;
+          margin-top: 1em;
+        }
+
+        .project-img {
+          flex: 1;
+        }
+
+        .project-img img {
+          width: 100%;
+          height: auto;
+          padding: 10px;
+        }
+
+        .project-links {
+          display: flex;
+          background: $darkGray;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          padding: 1em 0;
+
+          .project-link {
+            padding: 0.5em 0;
+            text-align: center;
+            width: 100%;
+
+            a {
+              color: $white;
+              font-size: 1.025em;
+            }
+
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
   }
@@ -339,17 +448,20 @@ label {
 
 /* Contact/Form ============================================*/
 
-#contact {
-  display: block;
+.contact {
+  display: flex;
+  flex-flow: column nowrap;
   background: $white;
-  padding: 1em 0 4em;
+  padding: 0 1em 5em;
   border-top: 3px solid $orange;
+  width: 100%;
 
-  h3 {
+  .contact-header {
     color: $orange;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
   }
 
-  form {
+  .contact-form {
     display: flex;
     flex-direction: column;
     background: $blue;
@@ -357,16 +469,19 @@ label {
     border-radius: 25px;
     box-shadow: 0 2px 15px 2px $black;
     padding: 1.5em 2em 2em;
-    margin-bottom: 2em;
+    margin: 0 auto;
+    width: 100%;
 
     label {
       color: $white;
-      font-family: roboto, sans-serif;
+      font-size: 1.25em;
+      margin-top: 1em;
     }
 
     input,
     textarea {
-      margin: 0.5em auto;
+      font-size: 1em;
+      margin: 0.75em auto;
       border: 1px solid $darkGray;
       border-radius: 5px;
       box-shadow: 2px 2px 15px 1px $darkGray;
@@ -374,33 +489,34 @@ label {
 
     input {
       width: 100%;
-      height: 3.5em;
+      height: 2.5em;
     }
 
     textarea {
       width: 100%;
-      height: 25em;
-      padding: 10px 15px;
+      height: 15em;
     }
 
-    #submit-btn {
-      background: $orange;
-      text-transform: uppercase;
+    .submit-btn {
+      color: #fff;
+      cursor: pointer;
+      height: inherit;
+      width: 55%;
       font-weight: bold;
-      margin-top: 1.25em;
-      width: 65%;
-      height: 3em;
+      background: $orange;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 1.05em;
+      border: 1px solid #222;
       border-radius: 50px;
-      color: $white;
-      box-shadow: 0px 5px 20px $darkGray;
-      font-size: 1em;
+      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
     }
   }
 }
 
 /* Footer ============================================*/
 
-.footer {
+.footer-container {
   padding: 1em 1em 2em;
   background: $darkGray;
   color: $white;
@@ -413,13 +529,13 @@ label {
     font-size: 1.25em;
   }
 
-  ul {
+  .social-list {
     margin-top: 1.5em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
 
-    li {
+    .social-list-item {
       width: auto;
       height: auto;
       margin: 0 auto;
@@ -516,111 +632,133 @@ label {
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/*
+========================================
+Tablet / Medium screen size styles
+========================================
+*/
 
 @media (min-width: 600px) {
-  /*About section styles on Tablet */
+  /* Showcase (medium screen)
+  =========================== */
 
-  #about .container {
-    overflow: hidden;
+  .showcase {
+    .showcase-heading {
+      font-size: 5em;
+    }
+
+    .showcase-message {
+      margin: 0.5em auto;
+    }
+
+    .showcase-cta {
+      margin: 0 auto;
+    }
   }
 
-  #about figure {
-    width: 45%;
-    float: left;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-
-  #about figcaption {
-    margin: 0 auto;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-
-  #about p {
-    width: 50%;
-    float: right;
-    padding: 0;
-    line-height: 1.6em;
-  }
-
-  #about div.container #cta-hire {
-    margin-top: 1em;
-    padding: 0;
-    text-align: center;
-  }
-
-  #about button {
-    margin: 2em auto;
-    width: 50%;
-  }
-
-  #about #cta-hire p {
+  /* About (medium screen)
+  =========================== */
+  .about {
     width: 100%;
-    font-size: 1.5em;
-    text-align: left;
+
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto, 1fr);
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 2em 0.5em;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .about-figure-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      /* padding: 1em 0 2em; */
+      width: 100%;
+      margin: 0;
+      text-align: center;
+
+      figcaption {
+        margin: 0 auto;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+    }
+
+    .about-text-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      line-height: 1.6em;
+      margin-top: 1em;
+      width: 100%;
+    }
+
+    .resume-cta-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+    }
+
+    .about-list-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+      .about-list {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+
+        .about-list-item {
+          width: 100%;
+          padding: 0.75em 0;
+          font-size: 1.25em;
+        }
+
+        .about-list li svg {
+          margin-right: 0.75em;
+        }
+      }
+    }
   }
 
-  #about #cta-hire p span {
-    font-style: italic;
+  /* recent-projects (medium screen)
+  =========================== */
+  .recent-projects {
+    .recent-projects-container {
+      .project-card {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
   }
 
-  /* Services section styles for tablets */
-
-  #services ul {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    padding-bottom: 3em;
+  /* Contact (medium screen)
+  =========================== */
+  .contact {
+    .contact-form {
+      width: 80%;
+    }
   }
 
-  #services ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+  /* Footer (medium screen)
+  =========================== */
+
+  .footer-container {
+    background: #333;
+    width: 100%;
   }
 
-  #services ul li p {
-    text-indent: 0;
-  }
-
-  #services ul li img {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* Contact/Form styles for tablets */
-
-  #contact {
-    display: block;
-  }
-
-  #contact .container {
-    text-align: center;
-  }
-
-  #contact form {
-    margin: 0 auto;
-    width: 60%;
-  }
-
-  #contact form label {
-    text-align: left;
-  }
-
-  /* Footer section styles for tablets */
-
-  .footer .container {
-    width: 45%;
-  }
-
-  .footer ul {
+  .social-list {
     width: 75%;
     margin: 1.5em auto 0;
     display: grid;
@@ -628,108 +766,86 @@ label {
     text-align: center;
   }
 
-  .footer ul li {
+  .social-list-item {
     width: auto;
     height: auto;
     margin: 0 auto;
   }
 
-  .footer ul li img {
+  .social-list-item > img {
     width: 50px;
     height: 50px;
   }
 }
 
+/*
+========================================
+Desktop styles
+========================================
+*/
+
 @media (min-width: 960px) {
-  /* Showcase area styles for desktop screens */
+  .showcase {
+    .showcase-cta {
+      width: 20%;
+      cursor: pointer;
+      border: 3px solid #fff;
+      transition: background 0.75s ease-in-out;
+    }
 
-  #showcase h1 {
-    font-size: 6em;
-  }
-  #showcase button {
-    width: 20%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #showcase button:hover {
-    transform: scale(1.075);
+    .showcase-cta:hover {
+      background-color: #fff;
+      border: 3px solid $blue;
+      color: $blue;
+      font-weight: bold;
+    }
   }
 
   /* About section styles for desktop screen sizes */
 
-  .btn {
-    width: 30%;
-    height: 50px;
+  .about {
+    .interests-list {
+      width: 75%;
+    }
+
+    .about-text-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      line-height: 1.6em;
+      padding: 0em 5em;
+      margin-top: 2em;
+      width: 100%;
+    }
   }
 
-  #about {
-    padding: 0 0 3.5em;
-  }
+  /* Recent-projects section styles for desktop screen sizes */
 
-  #about div.container {
-    width: 75%;
-    margin: 0 auto;
-  }
-
-  #about button:hover {
-    font-weight: bolder;
-  }
-
-  #about .container#cta-hire {
-    margin: -7em 0 0;
-    float: right;
-  }
-
-  #about .container#cta-hire a:hover {
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  /* Services section styles for desktop screen sizes */
-
-  #services ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  #services ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .recent-projects {
+    .recent-projects-container {
+      display: grid;
+      grid-gap: 1em;
+      width: 75%;
+      margin: 0 auto;
+    }
   }
 
   /* Contact section styles for desktop screen sizes */
-
-  #contact {
-    display: block;
-  }
-
-  #contact form {
-    width: 45%;
-  }
-
-  #contact form input#submit-btn {
-    width: 45%;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #contact form input#submit-btn:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+  .contact {
+    .contact-form {
+      width: 45%;
+    }
   }
 
   /* Footer section styles for desktop screen sizes */
 
-  .footer ul {
-    width: 50%;
+  .social-list {
     margin: 1.5em auto 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
 
-  .footer ul li {
+  .social-list-item {
     width: auto;
     height: auto;
     margin: 0 auto;
@@ -739,11 +855,11 @@ label {
     transition: all 0.3s ease-in-out;
   }
 
-  .footer ul li:hover {
+  .social-list-item:hover {
     transform: scale(1.25, 1.25);
   }
 
-  .footer ul li img {
+  .social-list-item > img {
     width: 50px;
     height: 50px;
   }

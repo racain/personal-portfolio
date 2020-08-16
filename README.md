@@ -1,8 +1,6 @@
-# ryancain-portfolio
-This is an ongoing project that will change over time as I learn new development skills and techniques.
+# personal-portfolio
 
-Languages Used:
+This is my personal/portfolio site. This is an ongoing project that showcases my skillset, current projects, and
+personal interest.
 
-~ HTML
-~ CSS
-~ Javascript*
+https://www.ryancain.info/

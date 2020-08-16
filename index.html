@@ -2,133 +2,155 @@
 <html class="no-js" lang="en">
 
 <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Cain | Web Developer | Cincinnati, OH</title>
+    <meta name="description" content="Ryan Cain, web developer based in Cincinnati, OH.">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica|Roboto:300|Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--[if IE]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+    <header class="showcase">
+        <div class="showcase-overlay">
+            <h1 class="showcase-heading">Ryan Cain</h1>
+            <p class="showcase-message">Web Developer</p>
+            <a href="#about" class="showcase-cta">Read More</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="row about" id="about">
+            <div class="about-wrapper">
+                <div class="about-figure-container">
+                    <figure class="about-figure">
+                        <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,q_auto/v1587754432/self-portrait_l6isfd.jpg" alt="Ryan Cain" loading="lazy" />
+                        <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
+                    </figure>
+                </div>
+                <div class="about-text-container">
+                    <p class="about-text">A little bit about myself in a nutshell...I'm a native of Memphis, TN, but currently reside in Cincinnati, OH. I uprooted my life soley to be closer and more involved in my daughter's life. I've taken on a variety of jobs in order to make that happen. After scratching and clawing my way to get here, I've worked my way up in the culinary industry, to plant my feet and secure a future as a single father. I currently work as a Sous Chef aka Assistant Kitchen Manager, but my career goal is to become a Full-Stack Developer.
+                    </p>
+                    <p class="about-text">
+                        Currently, I'm working on transitioning into a Front-End Developer role with a skillset that involves HTML, CSS, and vanilla JavaScript. I plan to learn React next, but an in depth knowledge of JavaScript will provide a great understanding of what happens under the hood when using such libraries. Check out the code of my recent projects at <a class="github-link" href="https://www.github.com/racain" target="_blank" rel="noopener">Github</a>. While I'm not working on web development, I enjoy bar-b-quing/smoking pork low and slow to perfection, playing ice hockey, and spending time outdoors.
+                    </p>
+                </div>
+                <div class="resume-cta-container">
+                    <a href="./src/pages/resume" class="btn resume-cta">Read Resume</a>
+                </div>
+                <div class="about-list-container">
+                    <h3 class="about-list-header">Proficiencies</h3>
+                    <ul class="about-list">
+                        <li class="about-list-item"><i class="fab fa-html5"></i> HTML</li>
+                        <li class="about-list-item"><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li class="about-list-item"><i class="fab fa-js-square"></i> JS</li>
+                        <li class="about-list-item"><i class="fab fa-git-square"></i> Git</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="row recent-projects">
+            <h2 class="recent-projects-header">Recent Projects</h2>
+            <div class="recent-projects-container">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-title">Single Component</div>
+                        <picture class="project-img">
+                            <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,q_auto/v1587754433/single-component_ylhean.png" alt="single component screenshot" loading="lazy">
+                        </picture>
+                        <ul class="project-links">
+                            <li class="project-link"><a href="https://single-subscription-component.netlify.app/">Demo Live</a></li>
+                            <li class="project-link"><a href="https://github.com/racain/single-subscription-component">GitHub Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-title">Random Dog Generator</div>
+                        <picture class="project-img">
+                            <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,z_1/v1587755178/dog-paws_c8cgjd.jpg" alt="random dog generator screenshot" loading="lazy">
+                        </picture>
+                        <ul class="project-links">
+                            <li class="project-link"><a href="https://async-await-api-project.netlify.app/">Demo Live</a></li>
+                            <li class="project-link"><a href="https://github.com/racain/async-await-api-project">GitHub Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row contact">
+            <h2 class="contact-header">Let's chat...</h2>
+            <form class="contact-form" name="form" method="post" netlify-honeypot="bot-field" data-netlify="true">
+                <label for="firstName">First Name
+                    <input type="text" id="firstName" name="firstName" required />
+                </label>
+
+                <label for="lastName">Last Name
+                    <input type="text" id="lastName" name="lastName" />
+                </label>
+
+                <label for="email">Email
+                    <input type="text" id="email" name="email" required />
+                </label>
+
+                <input id="bot-field" name="bot-field" />
+
+                <label for="message">Message
+                    <textarea id="message" name="message" required></textarea>
+                </label>
+
+                <input type="submit" name="submit" class="btn submit-btn" />
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <p>Ryan Cain &copy; <span class='copyright-year'></span></p>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a href="https://twitter.com/ryancain_webdev" target="_blank" rel="noopener" rel="noopener">
+                    <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,q_auto/v1587754433/twitter-sm_xqpcv9.png" alt="Twitter icon that links to Ryan Cain 's twitter page" loading="lazy" />
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="https://github.com/racain" target="_blank" rel="noopener" rel="noopener">
+                    <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,q_auto/v1587754432/github-sm_csq2qu.png" alt="Github icon that links to Ryan Cain's github page" loading="lazy" />
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="https://www.linkedin.com/in/ryancainwebdev" target="_blank" rel="noopener" rel="noopener">
+                    <img src="https://res.cloudinary.com/img-assets/image/upload/f_auto,q_auto/v1587754432/linkedin-sm_ob5nbs.png" alt="LinkIn icon that links to Ryan Cain 's linkedin page" loading="lazy" />
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="src/js/plugins.js"></script>
+    <script src="build/app.bundle.js"></script>
+
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-104097712-1');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Cain</title>
-    <meta name="description" content="">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon icon in the root directory -->
-</head>
 
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- Add your site or application content here -->
-
-    <header id="showcase">
-        <div class="overlay">
-            <h1>Ryan Cain</h1>
-            <p>Web Developer</p>
-            <button class="btn">Read More</button>
-        </div>
-    </header>
-
-    <main>
-        <section id="about">
-            <div class="container">
-                <h3>About Me</h3>
-                <figure>
-                    <img src="img/self-portrait.jpg" alt="Ryan Cain, Web Developer" />
-                    <figcaption>Ryan Cain<br />Front End Web Developer</figcaption>
-                </figure>
-                <p>My name is Ryan Cain and I build websites for small businesses looking to create or expand their online presence. Do you need a website so your customers can find out more about your products or services? Do you want a website that looks great on all screen sizes? There are many devices, from small mobile phones to large desktop computers, that display your website and it should look clean and professional on all of them. I can help you put your business on the web and make sure your customers can easily find the information they are looking for no matter the device they use.</p>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h3 class="services-header">Services Provided</h3>
-                <ul class="services__list">
-                    <li>
-                        <img src="img/web-dev-icon-200.png" alt="" />
-                        Website Development
-                    </li>
-                    <li>
-                        <img src="img/web-maintenance-icon-200.png" alt="" />
-                        Website Modification
-                    </li>
-                    <li>
-                        <img src="img/social-media-setup-icon-200.png" alt="" />
-                        Social Media Setup
-                    </li>
-                    <li>
-                        <img src="img/hosting-setup-icon-200.png" alt="" />
-                        Domain Name/Hosting Preparation
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h3>Let's chat...</h3>
-
-                <form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required />
-
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" />
-
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" required />
-
-                    <input id="bot-field" name="bot-field" />
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <input type="submit" name="submit" class="btn" id="submit-btn" />
-                </form>
-
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>Ryan Cain &copy; 2018</p>
-            <ul>
-                <li class="social-icon">
-                    <a href="https://twitter.com/ryancain_webdev" target="_blank">
-                        <img src="img/twitter-sm.png" alt="Twitter icon that links to Ryan Cain 's twitter page" />
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="https://github.com/racain" target="_blank">
-                        <img src="img/github-sm.png" alt="Github icon that links to Ryan Cain's github page" />
-                    </a>
-                </li>
-                <li class="social-icon">
-                    <a href="https://www.linkedin.com/in/ryancainwebdev" target="_blank">
-                        <img src="img/linkedin-sm.png" alt="LinkIn icon that links to Ryan Cain 's linkedin page" />
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="src/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>') </script>
-    <script src="src/js/plugins.js"></script>
-    <script src="build/app.bundle.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')

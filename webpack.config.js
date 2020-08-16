@@ -1,10 +1,11 @@
 const path = require('path');
 
-// SASS compiler to CSS
 module.exports = {
   mode: 'production',
   entry: {
-    app: ['./src/styles/main.scss']
+    app: ['./src/styles/main.scss',
+          './src/app.js'
+        ]
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -21,6 +22,11 @@ module.exports = {
         ],
         exclude: path.resolve(__dirname, '/node_modules/')
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
     ],
   },
 }

@@ -1,2 +1,4 @@
-//import './js/scripts/name-of-JS-file-to import';
-//import './styles/main.css';
+import './styles/normalize.scss'
+import './styles/main.scss';
+import './js/components/GenerateYear';
+import './js/components/FlashMessage';
