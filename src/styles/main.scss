@@ -213,16 +213,41 @@ h3[class$="-header"] {
   }
 
   .showcase-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: $white;
     font-size: 4em;
     letter-spacing: 0.05em;
     margin: 0;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: '';
+      height: 2px;
+      background: #fff;
+      width: 75%;
+      margin-bottom: 2rem;
+    }
   }
 
   .showcase-message {
     font-size: 3em;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &::after {
+      content: '';
+      height: 2px;
+      background: #fff;
+      width: 75%;
+      margin-top: 2rem;
+    }
   }
 
   .showcase-cta {
@@ -234,10 +259,10 @@ h3[class$="-header"] {
     margin: 25px auto;
     padding: 20px;
     text-transform: uppercase;
-    font-size: 1.05em;
-    border: 1px solid #222;
-    border-radius: 50px;
-    //box-shadow: 0 3px 25px $black;
+    font-size: 1.025em;
+    font-weight: bold;
+    letter-spacing: .25rem;
+    border-radius: 6px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 }
@@ -645,11 +670,21 @@ Tablet / Medium screen size styles
   .showcase {
     .showcase-heading {
       font-size: 5em;
+
+      &::before {
+        content: '';
+        width: 50%;
+      }
     }
 
-    .showcase-message {
-      margin: 0.5em auto;
+  .showcase-message {
+    margin: 0.5em auto;
+
+    &::after {
+      content: '';
+      width: 50%;
     }
+  }
 
     .showcase-cta {
       margin: 0 auto;
@@ -786,18 +821,37 @@ Desktop styles
 
 @media (min-width: 960px) {
   .showcase {
+
+    .showcase-heading {
+      font-size: 5em;
+
+      &::before {
+        content: '';
+        width: 35%;
+      }
+    }
+
+  .showcase-message {
+    margin: 0.5em auto;
+
+    &::after {
+      content: '';
+      width: 35%;
+    }
+  }
+
     .showcase-cta {
       width: 20%;
       cursor: pointer;
-      border: 3px solid #fff;
-      transition: background 0.75s ease-in-out;
     }
 
     .showcase-cta:hover {
-      background-color: #fff;
-      border: 3px solid $blue;
-      color: $blue;
-      font-weight: bold;
+      color: $white;
+      transform: scale(1.025);
+    }
+
+    .showcase-cta:active {
+      transform: scale(0.98);
     }
   }
 
