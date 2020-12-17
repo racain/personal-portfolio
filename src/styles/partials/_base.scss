@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$clor-neutral--100: #fff; // white
+$clr-neutral--700: #333; // night rider (grey)
+$clr-neutral--900: #000; // black
+$clr-primary--400: #2471a3; // lochmara (blue)
+$clr-accent--400: #ff8500; // dark orange
+
+
+html {
+  color: $clr-neutral--700;
+  font-size: 16px;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
