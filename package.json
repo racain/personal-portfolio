@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/racain/ryancain-portfolio#readme",
   "devDependencies": {
-<<<<<<< HEAD
     "css-loader": "^3.2.1",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.0",
@@ -41,10 +40,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "serialize-javascript": "^4.0.0"
-  }
-}
-=======
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "babel-cli": "^6.26.0",
@@ -55,11 +50,7 @@
     "style-loader": "^1.1.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
-  },
-  "dependencies": {}
+    "webpack-dev-server": "^3.9.0",
+    "serialize-javascript": "^4.0.0"
+  }
 }
-<<<<<<< HEAD
->>>>>>> abf60477711440f51d8f6c41d792830ec3de0333
-=======
->>>>>>> develop
