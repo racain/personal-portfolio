@@ -84,8 +84,8 @@ textarea {
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+Browser Upgrade Prompt
+========================================================================== */
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -150,6 +150,11 @@ h6 {
 p {
   font-size: 1.2em;
   line-height: 1.6em;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 ul {
@@ -222,14 +227,6 @@ h3[class$="-header"] {
     letter-spacing: 0.05em;
     margin: 0;
     text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
-
-    &::before {
-      content: '';
-      height: 2px;
-      background: #fff;
-      width: 75%;
-      margin-bottom: 2rem;
-    }
   }
 
   .showcase-message {
@@ -239,15 +236,8 @@ h3[class$="-header"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
     width: 100%;
-
-    &::after {
-      content: '';
-      height: 2px;
-      background: #fff;
-      width: 75%;
-      margin-top: 2rem;
-    }
   }
 
   .showcase-cta {
@@ -255,14 +245,14 @@ h3[class$="-header"] {
     cursor: pointer;
     width: 55%;
     background: $blue;
+    border-radius: 100px;
     display: inline-block;
-    margin: 25px auto;
+    margin: 2em auto;
     padding: 20px;
     text-transform: uppercase;
     font-size: 1.025em;
     font-weight: bold;
     letter-spacing: .25rem;
-    border-radius: 6px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   }
 }
@@ -314,6 +304,7 @@ h3[class$="-header"] {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-evenly;
+      padding: 1em 0;
 
       .about-list-item {
         padding: 0.75em 0;
@@ -406,9 +397,10 @@ h3[class$="-header"] {
 
   .recent-projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 2em 0;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 400px));
+    gap: 2em;
+    /* width: 100%; */
     margin: 0 auto;
 
     .project-card {
@@ -417,46 +409,39 @@ h3[class$="-header"] {
       color: $darkGray;
       display: flex;
       flex-flow: column nowrap;
+      justify-content: center;
       align-items: center;
       margin: 0 auto;
-      width: 75%;
-      height: auto;
       text-align: center;
-
-      .project-content {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+      width: 85%;
 
         .project-title {
-          font-size: 1.25em;
-          margin-top: 1em;
+          font-size: 1.25rem;
+          font-weight: bolder;
+          padding: 1em;
         }
 
         .project-img {
+          max-height: 250px;
+          width: 100%;
           flex: 1;
         }
 
-        .project-img img {
-          width: 100%;
-          height: auto;
-        }
-
         .project-links {
+          align-items: center;
+          color: $darkGray;
           display: flex;
-          background: $darkGray;
+          flex-flow: row nowrap;
           border-bottom-right-radius: 10px;
           border-bottom-left-radius: 10px;
-          padding: 1em 0;
+          width: 100%;
 
           .project-link {
-            padding: 0.5em 0;
+            padding: 1em 0;
             text-align: center;
             width: 100%;
 
             a {
-              color: $white;
               font-size: 1.025em;
             }
 
@@ -465,7 +450,6 @@ h3[class$="-header"] {
             }
           }
         }
-      }
     }
   }
 }
@@ -669,24 +653,15 @@ Tablet / Medium screen size styles
   .showcase {
     .showcase-heading {
       font-size: 5em;
-
-      &::before {
-        content: '';
-        width: 50%;
-      }
     }
 
   .showcase-message {
     margin: 0.5em auto;
-
-    &::after {
-      content: '';
-      width: 50%;
-    }
   }
 
     .showcase-cta {
       margin: 0 auto;
+      width: 35%;
     }
   }
 
@@ -823,25 +798,16 @@ Desktop styles
 
     .showcase-heading {
       font-size: 5em;
-
-      &::before {
-        content: '';
-        width: 35%;
-      }
     }
 
   .showcase-message {
     margin: 0.5em auto;
-
-    &::after {
-      content: '';
-      width: 35%;
-    }
   }
 
     .showcase-cta {
-      width: 20%;
       cursor: pointer;
+      margin-top: 2em;
+      width: 20%;
     }
 
     .showcase-cta:hover {
